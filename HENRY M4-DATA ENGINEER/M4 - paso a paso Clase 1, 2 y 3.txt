@@ -1,0 +1,316 @@
+
+
+INSTALACIONES:_________________________________________________________________________________________________________________
+
+
+- Instalar app (VirtualBox) que permitirá crear una máquina virtual que asumirá papel de servidor.
+  Dicho servidor va a ejecutar distintos servicios a través de CONTENEDORES ubicados en DOCKER instalado en LINUX
+	- Realizar la instalación de VirtualBox: https://www.virtualbox.org/wiki/Downloads
+	- Cargar archivo VDI para crear máquina virtual Linux en VirtualBox que será servidor Ubuntu
+	- Servidor Ubuntu ya contiene una instalación de Docker y docker compose
+		- usuario: ubuntu
+		- contraseña: ubuntu
+
+
+- Realizar la instalación de WinSCP: https://winscp.net/eng/download.php
+
+
+- Instalar app (Putty) para trabajar con acceso remoto al servidor (Linux en VirtualBox)
+	- Realizar la instalación de Putty: https://www.putty.org/
+	- Abrir putty y conectarse al servidor ubuntu (la direccion será la primera que aparece cuando se ejecuta el comando "hostname -I" en el servidor Ubuntu)
+	* De aquí en adelante se ejecutaran los comandos en la consola de putty quien se va a conectar remotamente al servidor ubuntu
+	* “sudo” se usa para que ejecute las isntrucciones en modo administrador (superusuario)
+
+
+CLASE 1: Virtualizacion_________________________________________________________________________________________________________________
+
+
+- Ejecutar en la consola el contenedor “hello-world” del Docker-Hub y luego verificar si está ejecutando:
+	1. $ sudo docker run hello-world	(va a levantar el contenedor (o contenedores) a partir de la imagen "hello-world". Ese contenedor particular ejecuta una accion y se apaga)
+	2. $ sudo docker ps			(muestra los contenedores activos)
+	3. $ sudo docker ps -a			(muestra todos los contenedores que se han ejecutado aunque no estén acivos)
+
+
+- Ejecutar una inspección de un contenedor específico
+	1. $ sudo docker inspect <container ID>		(muestra el detalle completo de un contenedor. Con escribir los primeros 3 caracteres del ID es suficiente)
+	2. $ sudo docker inspect <name>			(igual que el anterior pero invocado con el nombre)
+
+
+- Ejecutar el contenedor “hello-world” asignandole un nombre distinto.
+	1. $ sudo docker run -d --name hola-mundo hello-world	(le asigno un nombre "hello-world" a “hola-mundo”)
+	2. $ sudo docker rename hola-mundo hola-a-todos		(cambio el nombre de hola-mundo a hola-a-todos)
+
+
+- Ejecutar la eliminación de un contenedor (usar rm y prune)
+	1. $ docker rm <ID o nombre>		(borro un contenedor especifico)
+	2. $ docker container prune		(borro todos lo contenedores que esten parados)
+
+
+* Ejecutar la imagen “ubuntu”:
+	1. $ docker run ubuntu		(corre un ubuntu pero lo deja apagado)
+	2. $ docker run -it ubuntu	(lo corre y entro al shell de ubuntu: -i (interactivo) -t (abre la consola)
+
+	Corre el siguiente comando en la consola de linux:
+		1. $ cat /etc/lsb-release	(veo la versión)
+
+  Ejecutar la imagen “nginx” y probar los comandos “stop” y “rm”
+	3. $ docker run -d --name proxy nginx					(creo un contenedor llamado "proxy" a partir de la imagen "nginx")
+	4. $ docker stop proxy 							(detiene el contenedor)
+	5. $ docker rm proxy 							(borra el contenedor)
+	6. $ docker rm -f <contenedor> 						(lo fuerza para que se detenga "-f" y lo borra "rm")
+
+
+* Explorar contenedores desde el navegador web 
+	1. $ docker run -d --name proxy -p 8081:80 nginx			(corro un nginx redirigiendo el puerto 8081 de mi máquina al 80 del contenedor)
+	2. localhost:8081							(ejecuto desde mi navegador y compruebo que funcione)
+
+
+* Ejecutar el comando logs para ver los logs del contenedor de nginx:
+	1. $ docker logs proxy							(veo los logs)
+	2. $ docker logs -f proxy 						(hago un follow del log)
+	3. $ docker logs --tail 10 -f proxy					(veo y sigo solo las 10 últimas entradas del log)
+
+
+
+EJERCICIO ADICIONAL VOLUMENES Y MONGO:
+
+	- Objetivo:
+		1. Crear un contenedor (a) de mongodb que use un volumen
+		2. Eliminar el contenedor
+		3. Crear otro contenedor (b) que use la informacion persistente del contenedor (a)
+		4. Verificar que la data es persistente
+
+	- Referencia: Pueden tomar como referencia el video del dataft11, M4, clase 2, Code review, 1hr 24min en adelante
+	- Esto es una variante de la guia que se ofrece en Rise de Docker :)
+
+	PASOS:
+		1. Crear una carpeta para usarla de conexion entre Docker y la maquina anfitrion mkdir dockerdata
+		2. Entrar a la carpeta creada cd dockerdata
+		3. Levantar un contenedor que genere un volumen, este volumen vincula la carpeta "dockerdata" que acabamos de crear con la carpeta "/data/db" en el contenedor docker run -d --name mongodb -v "$(pwd)":/data/db mongo:4.0.4
+		4. Verificar que el contenedor esta prendido docker ps
+			- Se usa la version de mongo 4.0.4 para que el contenedor quede prendido, si no llegasea funcionar se puede intentar con: docker run -d --name mongodb -v "(pwd)":/data/db mongo docker run -d --name mongodb -v "(pwd)":/data/dbmongodockerrun−d−−namemongodb−v"(pwd)":/data/db mongo:4.4
+		5. Entrar en el contenedor: docker exec -it mongodb bash
+		6. Dentro del contenedor conectarse a la base de datos mongo
+		7. Usar la base de datos prueba, insertar un color y verificar que este insertado show dbs (listo las bases de datos) use prueba (creo la base “prueba”) db.prueba.insert({‘color’: ’azul’}) (inserto un nuevo dato) db.prueba.find() (veo el dato que cargué)
+		8. Salir de mongo y luego del contenedor exit exit
+		9. Eliminar el contenedor docker rm mongodb
+		10. Levantar otro contenedor, con el nombre db, que se vincule con la carpeta que anteriormente se levanto docker run -d --name db --mount type=bind,source='/home/ubuntu/dockerdata',target='/data/db' mongo:4.0.4
+			- Usar la misma version que funciono en el paso (4)
+		11. Entrar en el contenedor que acabamos de levantar docker exec -it db bash
+		12. Entrar a mongo y verificar que tenemos la data que insertamos en el primer contenedor mongo use prueba db.prueba.find()
+
+
+CLASE 2: Cluster y Hadoop_________________________________________________________________________________________________________________
+
+
+- Crear cluster Hadoop siguiendo las siguientes instrucciones: (primero se crea la red y después se unen los nodos/contenedores mediante la configuracion en un archivo docker compose)
+	1. $ git clone https://github.com/soyHenry/DS-M4-Cluster_Hadoop 	(descarga el repositorio para ejecutar el cluster)
+	2. $ sudo docker network create --driver=bridge hadoop			(Crear red para el cluster de hadoop: sera de tipo "bridge" y se llamara "hadoop")
+	3. $ sudo docker network ls 						(listar las redes)
+	4. $ sudo docker network inspect <nombre>				(veo la definición de la red)
+
+
+- Crear cluster Hadoop siguiendo las siguientes instrucciones (usualmente todo esto viene definido dentro del archivo docker_compose.ym pero acá está dentro de star-container.sh)
+
+	1. $ cd DS-M4-Cluster_Hadoop			(ingresar al directorio descargado)
+	2. $ ls						(verificar que esté el archivo star-container.sh)
+	3. $ chmod +x ./start-container.sh		(cambia el modo en que está almacenado el archivo stat-container.sh para que sea un archivo ejecutable y permite que se pueda ejecutar)
+	4. $ sudo ./start-container.sh			(ejecuta el archivo "start-container.sh" que tiene los comandos para configurar los contenedores/nodos, conectarlos a la red e inicializar el cluster levantando todo)
+	
+	* El archivo "star-container.sh" que se ejecutó contiene:
+		- los comandos para instalar hadoop en los contenedores a partir de la imagen que ya viene en el servidor UBUNTU
+		* no puedo utilizar hadoop desde la imagen, me toca instalarlo en un contenedor (a partir de la imagen) para poder usarlo
+		- Levanta contenedores a partir de las imagenes (masters y slaves)
+		- les especifica parametros como (nombre, nombre dentro de la red, puertos, red a la que pertenece y forma en la que corre -i -d)
+		- los puertos de las herramientas y servicios están establecidos por defecto (es mejor usar los establecidos que asignar numeros aleatorios para no generar colisiones mas adelante)
+
+
+- Inicializar hadoop:
+	1. Reviso la linea de comandos para darme cuenta si estoy dentro del contenedor	master
+	2. # ls						(ver el contenido de la carpeta en la que estoy)
+	3. # ./start-hadoop.sh				(ejecuta un archivo y levanta el servicio)
+
+
+- Descargar un archivo en un contenedor, usar hpdf y mapreduce con dicho archivo:
+	1. # wget https://raw.githubusercontent.com/uracilo/testdata/master/odisea.txt		(get/request: descargar archivo de una web)
+	2. # mkdir input									(crea directorio llamado input)
+	3. # tar -czvf input/odisea.tar.gz odisea.txt						(con la herramienta tar se comprime el archivo "odisea.txt" y guardarlo dentro de "input/odisea.tar.gz". -c:generar archivo - z:comprimir con gzip -v:progreso del proceso -f:especificar nombre del archivo y la ruta donde se va a guardar)
+
+	** # ls -flarts <nombre>					(revisar tamaño de los archivos de ese directorio)								(revisa el tamaño de los archivos)
+
+	4. # hdfs dfs -mkdir -p test								(crear un folder/carpeta llamada "test" que estará dentro del sistema de almacenamiento de hdfs)
+	5. # hdfs dfs -ls									(muestra el contenido del sistema de almacenamiento hdfs)
+	6. # hdfs dfs -put input								(copia la carpeta "input" dentro del sistema de almacenamiento hdfs)
+	7. # hdfs dfs -ls									(muestra el contenido del sistema de almacenamiento hdfs)
+	8. # hdfs dfs -ls input									(ver el contenido de la carpeta input que se encuentra dentro del sistema de almacenamiento hdfs)
+	9. # hdfs dfs -cat  input/odisea.tar.gz | zcat | tail -n 20				(ver el contenido de las ultimas 20 lineas del archivo)
+
+	PLUS: ejecutar un trabajo de mapreduce dentro de hadoop (este trabajo hará una conteo de palabras)
+	** # hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/sources/hadoop-mapreduce-examples-2.7.2-sources.jar org.apache.hadoop.examples.WordCount input output
+	** # hdfs dfs -cat output/part-r-00000							(ver el resultado del trabajo en hadoop)
+
+	10. # hdfs dfs –rm –f /user/rawdata/example/odisea.tar.gz				(eliminar el archivo en hadoop hdfs)
+
+
+- Interactuar con el contenedor hadoop desde una interfaz gráfica:
+	1. “ip_maquinaVirtual:8088”.					(Ingresar al navegador web local y escribir el comando. la URL (iplocal) o "localhost" con el puerto definido en el archivo que levantó el cluster "star-cointainer.sh". Localhost para los que no usan maquinaVirtual)
+
+
+CLASE 3: Hive_________________________________________________________________________________________________________________
+
+** El volumen lo que me permite es compartir informacion de la maquina virtual con el contenedor
+
+
+- Instrucciones para la configuración:
+	1. $ sudo apt install -y docker-compose					(instala docker compose. OJO!! la maquina virtual ya lo tiene instalado)
+	2. $ git clone https://github.com/soyHenry/DS-M4-Hue_Hive		(descarga el repositorio y las carpetas que contiene de la URL especificada)
+	3. $ cd DS-M4-Hue_Hive/							(ingresar al directorio descargado)
+	** el docker-compose ya tiene todo lo que vamos a utilizar
+	4. $ sudo docker-compose up						(ejecuta y levanta todos los contenedores y servicios que vamos a utilizar)
+	** Ctrl + c								(retoma la terminal pero detiene todos los contenedores)
+	5. $ sudo docker-compose up -d						(ejecuta y levanta todos los contenedores y servicios pero no toma la terminal sino lo hace background)
+
+
+- Ingresar a Hue para trabajar el entorno desde ahí
+	** Hue es una interfaz que nos permite ejecutar diversos servivicios (herramientas) dentro del ecosistema hadoop
+	1. http://<ip virtual>:8888/hue						(IP si se usa maquina virtual, de lo contrario de usa localhost)
+	2. Crear usuario 1 para ingresar
+		- usuario 1: ubuntu
+		- contraseña 1: ubuntu
+	3. Ingresar a "gestionar usuarios" para crear usuario con todos los permisos y que sirva para el resto de prácticas
+		- usuario 2: instructor
+		- contraseña 2: ubuntu
+	4. Cerrar sesion e ingresar como usuario instructor
+
+
+- Ingresar como "instructor" para cargar la data y los archivos que vamos a utilizar
+	1. http://<ip virtual>:8888/hu
+	2. Ingresar con usuario: instructor	pass: instructor
+	3. En la sección "archivos" de Hue, cargar los archivos de la carpeta data (arrastrando y soltando). (también se puede hacer replicando la misma estructura de directorios/carpetas y subir archivo por archivo).
+	** Replicar la misma estructura de directorios en HDFS (crear las carpetas) y en la sección de archivos, cargar los archivos del carpeta data.
+	4. En la sección "mis documentos" de Hue (fuera de la carpeta gist), cargar el archivo clase-03.json y luego ejecutarlo (al hacer doble click se abrirá con el editor de Hive).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15) Ejecutar la imagen “mongodb” y asociarla con un directorio en mi máquina
+	1. $ mkdir dockerdata												(creo un directorio en mi máquina)
+	2. $ docker run -d –-name mongodb -v <path de mi maquina>:<path dentro del contenedor(/data/db)> mongo		(corro un contenedor de mongo y creo un bind mount)
+	
+	Se debe entrar al directorio creado y desde ahí ejecutar el siguiente comando (o en su defecto copiar el resultado de pwd dentro del directorio en nuestra declaración):
+		1. docker run -d --name mongodb -v "$(pwd)":/data/db mongo
+		* De arrojar error Exited (132) debemos usar otra versión (4.4 por ejemplo) usando mogno:X.X en vez de mongo solamente.2
+
+16) Ejecutar el comando “exec” para introducirse en el shell de un contenedor:
+	1. $ docker ps				(veo los contenedores activos)
+	2. $ docker exec -it mongodb bash 	(entro al bash del contenedor)
+
+17) Ejecutar los siguientes comandos:
+	1. $ mongo					(me conecto a la base de datos)
+	2. show dbs 					(listo las bases de datos)
+	3. use prueba 					(creo la base “prueba”)
+	4. db.prueba.insert({‘color’: ’azul’}) 		(inserto un nuevo dato)
+	5. db.prueba.find() 				(veo el dato que cargué)
+	6. Revisar el contenido del directorio creado
+	7. Volver a ejecutar el contenedor mongodb y verificar que el dato insertado en una ejecución previa ya se pueda ver, debido a que la nueva ejecución levanta lo datos ligados mediante Bind. Se debe usar el comando docker container start mongodb si está parado
+
+18) Volúmenes
+	1. $ docker exec -it mongodb bash	(ingresar al contenedor)
+	2. $ mongo 				(conectarse a la BBDD)
+	3. show dbs 				(se listan las BBDD)
+	4. use prueba 				(se crea la BBDD prueba)
+	5. db.prueba.insert({“color”:“azul”}) 	(se carga un dato)
+	6. db.prueba.find() 			(se visualiza el dato cargado)
+
+	Y al crear un nuevo contenedor se usa el mismo
+		1. $ docker run -d --name db --mount type=bind,source='/home/ubuntu/dockerdata',target='/data/db' mongo
+
+5) $ docker run -d --name ubuntu_test ubuntu tail -f /dev/null
+
+6) $ docker exec -it ubuntu_test bash
+
+7) En el contendedor, se crea el directorio “test”, al salir del contenedor para copiar un archivo dentro del contenedor: $ docker cp test.txt ubuntu_test:test
+
+8) Copiar desde el contenedor a la máquina anfitrión:
+	1. $ docker cp ubuntu_test:test [carpeta local]
+
+19) Imagenes:
+	$ docker image ls (ver las imágenes que tengo localmente)
+	$ docker pull ubuntu:20.04 (bajo la imagen de ubuntu con una versión específica)
+	$ mkdir imagenes (creo un directorio en mi máquina)
+	$ cd imagenes (entro al directorio)
+	$ touch hola.txt (creo un archivo txt y dentro ingreso la palabra 'hola')
+	$ touch Dockerfile (creo un Dockerfile)
+
+	$ vi Dockerfile (abro el Dockerfile con editor de textos 'vi')
+
+
+	##Contenido del Dockerfile##
+	
+	FROM ubuntu:20.04
+	COPY /hola.txt /
+	RUN cat /hola.txt
+
+	##fin##
+
+	$ docker build -t ubuntu:latest . (creo una imagen con el contexto de build <directorio>)
+	$ docker run -it ubuntu:latest (corro el contenedor con la nueva imagen)
+
+	$ docker login (me logueo en docker hub)
+
+	$ docker tag ubuntu:latest miusuario/ubuntu:latest (cambio el tag para poder subirla a mi docker hub)
+
+	$ docker push miusuario/ubuntu:latest (publico la imagen a mi docker hub)
+	La importancia de entender el sistema de capas consiste en la optimización de la construcción del contenedor para reducir espacio ya que cada comando en el dockerfile crea una capa extra de código en la imagen.
+
+	Con docker commit se crea una nueva imagen con una capa adicional que modifica la capa base.
+
+	Ejemplo: crear una nueva imagen a partir de la imagen de Ubuntu.
+
+		$ docker pull ubuntu
+
+		$ docker images
+
+		$ docker run -it bin/bash
+
+	Como ejemplo, modificar el contenedor ejecutando lo siguiente:
+
+		$ apt update
+		$ apt-get install nmap
+		$ nmap www.google.com (Nmap sirve para efectuar rastreo de una URL y/o puerto)
+		$ docker commit ubuntu-nmap
+
+		$ docker history ubuntu:ubuntu2 (ver la info de como se construyó cada capa)
+
+		$ dive ubuntu:ubuntu2 (ver la info de la imagen con el programa dive)
+
+20) Redes: Ejecutar los siguientes comandos:
+
+	1. $ docker network ls (listar las redes)
+	2. $ docker network create --attachable test_red (crear la red)
+	3. $ docker inspect test_red (ver definición de la red creada)
+	4. $ docker run -d --name db mongo (creo el contenedor)
+	5. $ docker network connect test_red db (conecto el contenedor “db” a la red “test_red”)
+	6. $ docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test ubuntu (corro el contenedor “app” y le paso una variable)
+	7. $ docker network connect test_red app (conecto el contenedor “app” a la red “test_red”)
+
+
+
+
+

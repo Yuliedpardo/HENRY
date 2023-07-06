@@ -1,0 +1,50 @@
+HOMEWORK 5
+
+1. ¿Qué tan actualizada está la información? ¿La forma en que se actualiza ó mantiene esa información se puede mejorar?
+
+	No esta actualizada la informacion.
+	Se ve enconsulta - ventas - fecha_entregas
+	La forma de actualización depende del caso de uso que le demos. Si se necesita en tiempo
+	real (actualización streaming) o si solo de usa 1 vez al día (actualización batch)
+
+2. ¿Los datos están completos en todas las tablas?
+
+	Los datos no están completos en las tablas. 
+	Se ven los campos vacios en proveedores y productos al hacer consulta general.
+
+3. ¿Se conocen las fuentes de los datos?
+
+	En la homework de la calse 4 nos dan una pequeña noción de los origenes de las tablas de excel.
+
+4. Al integrar éstos datos, es prudente que haya una normalización respecto de nombrar las tablas y sus campos.
+
+	Normalización: poder llevar de sistema dimensional a sistema transaccional.
+	Normalizar: no ser redundante con la información.
+	sistema dimensional: información redundante para facil consulta y analisis
+	sistema transaccional: información no redundate (no se repite) para mayor eficiencia en los procesos
+	Otra forma de interpretar normalización: estandarizar y limpiar datos.
+
+5. Es importante revisar la consistencia de los datos:
+
+	¿Se pueden relacionar todas las tablas al modelo?
+	Con un analisis generar si se puede ver que las tablas se pueden relacionar, solo es cuestión de armar PK y FK
+
+	¿Cuáles son las tablas de hechos y las tablas dimensionales o maestros?
+	una tabla de hecho es algo que sucede (una acción)
+	las tablas de hecho se pueden evidenciar viendo que tantas refeencias a otras tablas se están haciendo (ID o FK de otras tablas)
+	las tablas dimensionales (o tablas de dimensiones) son tablas que necesito para que el fact table se realice
+	FACT TABLE: compra, venta, gasto
+	DIMENSIONALES: el resto de tablas
+
+	¿Podemos hacer esa separación en los datos que tenemos (tablas de hecho y dimensiones)?
+	relacionada con la pregunta anterior
+	
+	¿Hay claves duplicadas?
+	select ID
+	
+
+	¿Cuáles son variables cualitativas y cuáles son cuantitativas?
+	
+
+	¿Qué acciones podemos aplicar sobre las mismas?
+	

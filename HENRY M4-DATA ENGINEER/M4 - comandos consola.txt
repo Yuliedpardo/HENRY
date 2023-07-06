@@ -1,0 +1,113 @@
+QUE ES DOCKER? (contenido extra de youtube)
+
+	https://www.youtube.com/watch?v=kkfZs0vJFyU
+	https://www.youtube.com/watch?v=FAJ1o3hb35s
+	https://www.youtube.com/watch?v=mzo2OjcSxag
+
+
+* Docker hub: 		--> web con imagenes para levantar contenedores en docker
+* Docker image:		--> Archivo para levantar un contenedor
+* Docker compose:	--> archivo (.yml) para levantar contenedores, servicios y red. Se necesita instalar docker compose
+
+
+** La buena practica es no usar un contenedor que ya termino su ejecucion
+** Contenedor que se usa contenedor que se descarta
+** No es necesario eliminarlo pero suele hacerse 
+** Comunmente cada que se va a usar un contenedor se crea uno nuevo
+
+
+*** Está enfocado en servicios para servidores
+
+
+COMANDOS VARIOS:___________________________________________________________________________________________________________________________________
+
+	- df -h						(revisar el porcentaje ocupado de la maquina virtual: linea que dice /dev/mapper/...)
+	- ls						(listar archivos y carpetas que tenemos dentro del directorio en el que estamos)
+	- dir						(listar archivos y carpetas que tenemos dentro del directorio en el que estamos)
+	- pwd						(print working directory: muestra la ruta/path en el que estamos)
+	- cd <nombre_folder>				(change directory: cambiar de directorio)
+	- cd ..						(retroceder un directorio: ir un folder hacia atrás)
+	- clear						(limpiar el terminal)
+	- mkdir <nombre>				(make directory: crear directorio)
+	- rm -r <nombre_del_directorio>			(remueve un directorio)
+	- ls -flarts <directorio>			(muestra el tamaño de los archivos de un directorio)
+	- ls -flarts					(muestra el tamaño de los archivos del directorio actual)
+	- dpkg --get-selections				(ver lista de paquetes instalados)
+	- apt list --installed				(ver lista de paquetes actualizados en el sistema)
+
+	- sudo docker images				(ver las imagenes de contenedores que se tiene)
+	- sudo docker ps				(muestra los contenedores activos)
+	- sudo docker ps -a				(muestra todos los contenedores que se han ejecutado aunque no estén acivos)
+	- sudo docker ps -a -s				(muestra el tamaño de todos los contenedores)
+	- sudo docker inspect <container_ID>		(muestra el detalle completo de un contenedor. Con escribir los primeros 3 caracteres del ID es suficiente)
+	- sudo docker inspect <name>			(igual que el anterior pero invocado con el nombre)
+
+	- sudo docker run <nombre>			(crear el contenedor (o contenedores) que estén en la imagen "nombre")
+	- sudo docker start <nombre_o_ID_del_contenedor>(encender un contenedor)
+	- sudo docker stop <nombre_o_ID_del_contenedor>	(apagar un contenedor)	
+	- sudo docker stop <nombre_del_contenedor_o_ID>	(detener un contenedor)
+	- sudo docker stop $(sudo docker ps -aq)	(detener todos los contenedores)
+
+	- sudo docker exec -it <nombre> bash		(entrar en un contenedor que ya está prendido. "bash" se usa para que nos deje en la terminal del contenedor)
+	- sudo service --status-all 			(en ubuntu para ver el estado de los servicios administrados por el sistema de inicio (init system))
+	- sudo ps aux					(verificar los procesos en ejecucion)
+	- exit						(salir de un contenedor)
+
+
+	- sudo docker rename hola-mundo hola-a-todos	(le asigno un nombre "hello-world" a “hola-mundo”)
+	- sudo docker rmi <nombre_de_la_imagen_o_ID>	(eliminar una imagen específica)
+	- sudo docker rmi image1 image2 image3		(elimina varias imagenes)
+	- sudo docker rm <ID o nombre>			(borro un contenedor especifico)
+	- sudo docker container prune			(borro todos lo contenedores que esten parados)
+	- git clone <dir_web>				(clonar repositorio en el local)
+	
+
+	- sudo docker network create <tipo> <nombre>	(crear red)
+	- sudo docker network ls			(ver listado de redes)
+	- sudo docker network inspect <nombre>		(veo la definicion de una red)
+
+
+	- chmod +x ./<nombre_archivo.extension>		(volver un archivo ejecutable)
+	- sudo ./<nombre_archivo.extension>		(ejecutar un archivo)
+
+
+	- wget <url_dir_web>				(descargar archivo de direccion web)
+
+
+	- hdfs dfs -mkdir -p <nombre>			(crear una carpeta dentro del sistema de almacenamiento de hdfs)
+	- hdfs dfs -ls					(muestra el contenido del sistema de almacenamiento hdfs)
+	- hdfs dfs -put <nombre>			(copia una carpeta dentro del sistema de almacenamiento hdfs)
+	- hdfs dfs -ls <nombre>				(ver el contenido de una carpeta que se encuentra dentro del sistema de almacenamiento hdfs)
+	
+
+	- ip_local:8088					(ingresar a hadoop interfaz gráfica)
+	- ip_local:8888					(ingresar a hue: interfaz gráfica herramientas ecosistema hadoop)
+ 
+
+	- sudo docker-compose up			(ejecuta docker-compose: tiene info para levantar contenedores y servicios)
+	- sudo docker-compose up -d			(ejecuta docker-compose pero no toma la terminal sino lo hace background)
+	- sudo docker-compose down			(deshace el docker-compose, elimina contenedores y elimina la red)
+	- Ctrl + c					(detiene contenedores (suspende ejecucion) y retoma la terminal)
+
+	- sudo docker volume ls				(ver los volumenes creados en docker)
+
+	- winscp enviar archivos desde mi maquina a mi maquina virtual
+	- sudo docker cp <path><archivo> namenode:/home/Datasets/<archivo> namenode:/home/datasets/<archivo>	(copiar arhivos de mi maquina virtual a un contenedor oridgen --> destino)
+
+
+
+_________________________________________________________________________________________________________________
+
+DOCKER COMPOSE
+
+	$ docker-compose up -d				(crea todo lo declarado en el archivo docker-compose.yml)
+	$ docker network ls 				(listo las redes)
+	$ docker network inspect docker_default		(veo la definición de la red)
+	$ docker-compose logs 				(veo todos los logs)
+	$ docker-compose logs app 			(solo veo el log de “app”)
+	$ docker-compose logs -f app 			(hago un follow del log de app)
+	$ docker-compose exec app bash 			(entro al shell del contenedor app)
+	$ docker-compose ps 				(veo los contenedores generados por docker compose)
+	$ docker-compose down 				(borro todo lo generado por docker compose)
+	$ docker-compose build 				(crea las imágenes)
+	$ docker-compose up -d 				(crea los servicios/contenedores)
