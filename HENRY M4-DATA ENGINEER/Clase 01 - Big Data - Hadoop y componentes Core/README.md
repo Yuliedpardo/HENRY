@@ -12,7 +12,7 @@
 
 La era de los Datos.
 
-<img src="../_src/M4/assets/LaEraDeLosDatos.jpg"  height="400">
+<img src="/_src/M4/assets/LaEraDeLosDatos.jpg"  height="400">
 
 Los sistemas informáticos utilizados hoy en el mundo empresarial, para automatizar los procesos de negocio, tuvieron sus orígenes en el área militar. Entre 1950 y 1960, después de la Segunda Guerra Mundial, Estados Unidos comenzó a promover el uso de programas informáticos para la administración de tareas y organización de su ejército.
 
