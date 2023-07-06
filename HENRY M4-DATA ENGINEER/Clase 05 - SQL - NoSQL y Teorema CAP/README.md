@@ -19,7 +19,7 @@ Características:
 * Relaciones (JOINS)
 * Restricciones (PK, FK)
 
-<img src="../_src/assets/SQL.jpg"  height="400">
+<img src="../_src/M4/assets/SQL.jpg"  height="400">
 
 ## NoSQL
 
@@ -46,7 +46,7 @@ transaccionales propios de RDBMS, ACID (“Atomicity, Consistency, Isolation, Du
 En cambio soporta propiedades BASE (“Basically Available, Soft State, Eventually Consistent”).
 Las bases NoSQL son aproximadamente precisas en cualquier punto del tiempo y eventualmente consistentes.
 
-<img src="../_src/assets/ACIDvsBASE.jpg"  height="400">
+<img src="../_src/M4/assets/ACIDvsBASE.jpg"  height="400">
 
 ### RDBMS – ACID
 
@@ -71,7 +71,7 @@ Un sistema tiene tolerancia a Particiones (“Partition Tolerance”) si el proc
 Es importante también que la data sea consistente y esté disponible aún ante un fallo en la red que deje “particionada” la base en “islas”.
 De acuerdo con el Teorema CAP no es posible proveer simultáneamente más de dos de las tres propiedades (Consistencia, Disponibilidad, Particionado).
 
-<img src="../_src/assets/Teorema_CAP.jpg"  height="400">
+<img src="../_src/M4/assets/Teorema_CAP.jpg"  height="400">
 
 Se sacrifica consistencia a cambio de mayor rendimiento a través de la distribución de los datos.
 Ningún sistema distribuido está a salvo de las fallas de la red, por lo tanto, la partición de la red generalmente tiene que ser tolerada.
@@ -87,15 +87,15 @@ Con frecuencia, CAP se malinterpreta como si uno tuviera que elegir abandonar un
 disponibilidad se da solo cuando ocurre una partición de red o falla; en cualquier otro momento, no hay que hacer concesiones.
 Los sistemas de base de datos diseñados teniendo en cuenta las garantías tradicionales de ACID, como RDBMS, eligen la consistencia sobre la disponibilidad; mientras que los sistemas diseñados en torno a la filosofía BASE, comunes en el marco NoSQL, eligen la disponibilidad sobre la consistencia.
 
-<img src="../_src/assets/Teorema_CAP2.jpg"  height="250">
+<img src="../_src/M4/assets/Teorema_CAP2.jpg"  height="250">
 
 ### Consistencia
 
-<img src="../_src/assets/Consistencia.jpg"  height="250">
+<img src="../_src/M4/assets/Consistencia.jpg"  height="250">
 
 ### Disponibilidad
 
-<img src="../_src/assets/Disponibilidad.jpg"  height="250">
+<img src="../_src/M4/assets/Disponibilidad.jpg"  height="250">
 
 ### Enlace recomendado:
 
@@ -117,15 +117,15 @@ Los sistemas de base de datos diseñados teniendo en cuenta las garantías tradi
     Username: postgres<br>
     Password: changeme<br>
 <hr>
-<img src="../_src/assets/PgAdmin_01.jpg"  height="250">
+<img src="../_src/M4/assets/PgAdmin_01.jpg"  height="250">
 <hr>
-<img src="../_src/assets/PgAdmin_02.jpg"  height="250">
+<img src="../_src/M4/assets/PgAdmin_02.jpg"  height="250">
 <hr>
-<img src="../_src/assets/PgAdmin_03.jpg"  height="250">
+<img src="../_src/M4/assets/PgAdmin_03.jpg"  height="250">
 <hr>
-<img src="../_src/assets/PgAdmin_04.jpg"  height="250">
+<img src="../_src/M4/assets/PgAdmin_04.jpg"  height="250">
 <hr>
-<img src="../_src/assets/PgAdmin_05.jpg"  height="250">
+<img src="../_src/M4/assets/PgAdmin_05.jpg"  height="250">
 
 ## Homework
 

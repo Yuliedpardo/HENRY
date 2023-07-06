@@ -12,11 +12,11 @@
 * Bases de datos de Familia de Columnas. (“Column-Family Databases”)
 * Bases de datos de Grafos. (“Graph Databases”)
 
-<img src="../_src/assets/NoSQL.jpg"  height="400">
+<img src="../_src/M4/assets/NoSQL.jpg"  height="400">
 
 ## Ejemplos:
 
-<img src="../_src/assets/NoSQL_Ejemplos.jpg"  height="300">
+<img src="../_src/M4/assets/NoSQL_Ejemplos.jpg"  height="300">
 
 ## DynamoDB
 
@@ -24,7 +24,7 @@ DynamoDB es una base de datos NoSQL (Not only SQL) de tipo clave-valor disponibl
 En DynamoDB las tablas son las colecciones de elementos, y los elementos son colecciones de atributos o pares clave-valor. La clave primaria de una tabla está compuesta de una clave de partición y de una clave de clasificación (sort key).
 También, se puede usar un índice secundario global o GSI, que permite realizar consultas filtrando por columnas que no sean la clave de partición o de clasificación.
 
-<img src="../_src/assets/DynamoDB.jpg"  height="300">
+<img src="../_src/M4/assets/DynamoDB.jpg"  height="300">
 
 ## HBase
 
@@ -34,7 +34,7 @@ Una columna en Hbase representa un atributo de un objeto.
 Hbase es diferente a las bases RDBMS en términos de cómo los datos son almacenados.
 Todos los datos de Hbase se almacenan en archivos HDFS.
 
-<img src="../_src/assets/Cassandra.png" height="300">
+<img src="../_src/M4/assets/Cassandra.png" height="300">
 
 ## Cassandra
 
@@ -46,13 +46,13 @@ El modelo de datos de Cassandra consiste en filas particionadas que se almacenan
 medio de llaves (“keys”).
 El modelo Peer-To- Peer, permite que los nodos se relacionen entre sí.
 
-<img src="../_src/assets/Cassandra.jpg" height="300">
+<img src="../_src/M4/assets/Cassandra.jpg" height="300">
 
 ## Neo4J
 
 Neo4j es un software libre de Base de datos orientada a grafos, implementado en Java. Es un motor de persistencia embebido, basado en disco, implementado en Java, completamente transaccional, que almacena datos estructurados en grafos en lugar de en tablas.
 
-<img src="../_src/assets/Neo4J.jpg" height="300">
+<img src="../_src/M4/assets/Neo4J.jpg" height="300">
 
 ## MongoDB
 
@@ -67,7 +67,7 @@ Características:
 * Escalabilidad horizontal.
 * Soporte para diferentes motores de almacenamiento.
 
-<img src="../_src/assets/MongoDB.jpg" height="300">
+<img src="../_src/M4/assets/MongoDB.jpg" height="300">
 
 ### Paper Destacado:
 
@@ -87,18 +87,18 @@ Características:
 Vamos a utilizar las plataformas online que ofrecen los vendors de soluciones NoSQL. 
 
 1) [Neo4J] (https://sandbox.neo4j.com/login)
-<img src="../_src/assets/Practica_Neo4J_01.jpg" height="300">
-<img src="../_src/assets/Practica_Neo4J_02.jpg" height="300">
+<img src="../_src/M4/assets/Practica_Neo4J_01.jpg" height="300">
+<img src="../_src/M4/assets/Practica_Neo4J_02.jpg" height="300">
 * Se puede descargar y utilizar Neo4J localmente también, en el archivo "ejemploNeo4J.txt" se pueden ingestar algunas tablas!
 <hr>
 2) [Cassandra] (https://astra.datastax.com/register)
-<img src="../_src/assets/Practica_Cassandra_01.jpg" height="300">
-<img src="../_src/assets/Practica_Cassandra_02.jpg" height="300">
+<img src="../_src/M4/assets/Practica_Cassandra_01.jpg" height="300">
+<img src="../_src/M4/assets/Practica_Cassandra_02.jpg" height="300">
 * Utilizar el archivo "training.cql" para realizar consultas!
 <hr>
 3) [MongoDB] (https://docs.mongodb.com/manual/tutorial/getting-started/)
-<img src="../_src/assets/Practica_MongoDB_01.jpg" height="300">
-<img src="../_src/assets/Practica_MongoDB_02.jpg" height="300">
+<img src="../_src/M4/assets/Practica_MongoDB_01.jpg" height="300">
+<img src="../_src/M4/assets/Practica_MongoDB_02.jpg" height="300">
 <hr>
 
 ## Homework

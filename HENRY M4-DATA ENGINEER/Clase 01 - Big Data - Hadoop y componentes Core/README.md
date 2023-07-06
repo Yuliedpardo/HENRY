@@ -12,7 +12,7 @@
 
 La era de los Datos.
 
-<img src="../_src/assets/LaEraDeLosDatos.jpg"  height="400">
+<img src="../_src/M4/assets/LaEraDeLosDatos.jpg"  height="400">
 
 Los sistemas informáticos utilizados hoy en el mundo empresarial, para automatizar los procesos de negocio, tuvieron sus orígenes en el área militar. Entre 1950 y 1960, después de la Segunda Guerra Mundial, Estados Unidos comenzó a promover el uso de programas informáticos para la administración de tareas y organización de su ejército.
 
@@ -65,11 +65,11 @@ El análisis de Big Data ayuda a las organizaciones a aprovechar sus datos y uti
 Las especiales características del Big Data hacen que su calidad de datos se enfrente a múltiples desafíos. Se trata de las conocidas como 3 Vs: Volumen, Velocidad y Variedad que definen la problemática del Big Data.
 Estas características del Big Data provocan que las empresas tengan problemas para extraer datos reales y de alta calidad, de conjuntos de datos tan masivos, cambiantes y complicados.
 
-<img src="../_src/assets/BigData.jpg"  height="400">
+<img src="../_src/M4/assets/BigData.jpg"  height="400">
 
 ### Casos de Uso
 
-<img src="../_src/assets/CasosDeUso.jpg"  height="400">
+<img src="../_src/M4/assets/CasosDeUso.jpg"  height="400">
 
 ### Data Lake
 
@@ -79,15 +79,15 @@ Dada la afluencia en los últimos tiempos, del uso de Internet y la tecnología 
 * Está diseñado soportar las cargas de trabajo de Big Data y Machine Learning.
 * Prioriza el almacenamiento de los datos en su formato original para luego ser procesados de acuerdo a la demanda.
 
-<img src="../_src/assets/DataLake.jpg"  height="400">
+<img src="../_src/M4/assets/DataLake.jpg"  height="400">
 
 ### Estrategia de Procesamiento
 
-<img src="../_src/assets/EstrategiaProcesamiento.jpg"  height="400">
+<img src="../_src/M4/assets/EstrategiaProcesamiento.jpg"  height="400">
 
 ### Arquitectura
 
-<img src="../_src/assets/Arquitectura.jpg"  height="400">
+<img src="../_src/M4/assets/Arquitectura.jpg"  height="400">
 
 ## Hadoop
 
@@ -104,17 +104,17 @@ Es un sistema open-source diseñado para almacenar y procesar Big Data de forma 
 
 ### Ecosistema Hadoop
 
-<img src="../_src/assets/Ecosistema_Hadoop.jpg"  height="400">
+<img src="../_src/M4/assets/Ecosistema_Hadoop.jpg"  height="400">
 
 ## Cluster Hadoop
 
-<img src="../_src/assets/Cluster_Hadoop.jpg"  height="400">
+<img src="../_src/M4/assets/Cluster_Hadoop.jpg"  height="400">
 
 ## Componentes Core
 
 ### HDFS (Hadoop Distributed File System)
 
-<img src="../_src/assets/HDFS.jpg"  height="100">
+<img src="../_src/M4/assets/HDFS.jpg"  height="100">
 
 Master -> NameNode
 Worker -> DataNode
@@ -123,7 +123,7 @@ Hadoop permite organizar computadoras en una relación maestro – esclavo que c
 
 Un Cluster Hadoop tiene dos tipos de nodos, un único “Master Node” llamado NameNode y un gran número de “Workers Nodes” llamados DataNodes.
 
-<img src="../_src/assets/Hadoop_Nodes.jpg"  height="200">
+<img src="../_src/M4/assets/Hadoop_Nodes.jpg"  height="200">
 
 El Masternode administra el sistema de archivos, su “namespace” y controla el acceso a los archivos por los clientes, conociendo qué bloques de qué archivos están en cada DataNode.
 Un único MasterNode implica la necesidad de “Hot backups” para mantener la disponibilidad del servicio.
@@ -172,11 +172,11 @@ Utilizan una estructura de datos persistentes HDFS y MapReduce están diseñados
 
 #### Ejemplo de escritura en HDFS
 
-<img src="../_src/assets/Escritura_HDFS.jpg"  height="400">
+<img src="../_src/M4/assets/Escritura_HDFS.jpg"  height="400">
 
 ### YARN (Yet Another Resource Negotiator)
 
-<img src="../_src/assets/YARN.jpg"  height="100">
+<img src="../_src/M4/assets/YARN.jpg"  height="100">
 
 Master -> ResourceManager
 Worker -> NodeManager
@@ -191,7 +191,7 @@ Brinda gran escalabilidad para expandirse más allá de 1000 nodos y provee ubic
 
 #### Ejemplo de ejecución de Jobs en YARN
 
-<img src="../_src/assets/Ejemplo_YARN.jpg"  height="400">
+<img src="../_src/M4/assets/Ejemplo_YARN.jpg"  height="400">
 
 - [YARN] (https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/YARN.html)
 
@@ -206,7 +206,7 @@ MapReduce es un "framework" de procesamiento paralelo para acelerar el procesami
 - [MapReduce] (https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
 
 
-<img src="../_src/assets/Ejemplo_MapReduce.jpg"  height="400">
+<img src="../_src/M4/assets/Ejemplo_MapReduce.jpg"  height="400">
 
 La función map(): se encarga del mapeo y es aplicada en paralelo para cada ítem en
 la entrada de datos. Esto produce una lista de pares (k2,v2) por cada llamada.

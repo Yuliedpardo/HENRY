@@ -19,13 +19,13 @@ Características:
 * Tolerancia a fallos.
 * Multipropósito.
 
-<img src="../_src/assets/Spark.jpg"  height="250">
+<img src="../_src/M4/assets/Spark.jpg"  height="250">
 
 Spark es ideal para tareas de procesamiento iterativo e interactivo de grandes "data sets" y flujos de datos ("streaming").
 Brinda una performance entre 10-100x mayor que Hadoop operando con construcciones de datos ("data constructs") llamadas "Resilient Distributed Datasets" (RDDs), esto ayuda a evitar latencias en tareas de lectura y escritura en discos.
 Es una alternativa a MapReduce.
 
-<img src="../_src/assets/MapReduce_Spark.jpg"  height="250">
+<img src="../_src/M4/assets/MapReduce_Spark.jpg"  height="250">
 
 * [Caso de Uber] (https://www.slideshare.net/databricks/spark-meetup-at-uber)
 * [Caso de Apple] (https://www.slideshare.net/databricks/apache-spark-at-apple-with-sam-maclennan-and-vishwanath-lakkundi)
@@ -39,23 +39,23 @@ Está basado en dos abstracciones:
 * RDD (Resilient Distributed Dataset)
 * DAG (Directed Acylic Graph)
 
-<img src="../_src/assets/Arquitectura_Spark.jpg"  height="250">
+<img src="../_src/M4/assets/Arquitectura_Spark.jpg"  height="250">
 
 Cada tarea de Spark crea un DAG de etapas de trabajo para que se ejecuten en un determinado cluster.
 En comparación con MapReduce, el cual crea un DAG con dos estados predefinidos (Map y Reduce), los grafos DAG creados por Spark pueden tener cualquier número de etapas Spark con DAG es más rápido que MapReduce por el hecho de que no tiene que escribir en disco los resultados obtenidos en las
 etapas intermedias del grafo.
 Gracias a una completa API, es posible programar complejos hilos de ejecución paralelos en unas pocas líneas de código.
 
-<img src="../_src/assets/DAG.jpg"  height="250">
+<img src="../_src/M4/assets/DAG.jpg"  height="250">
 
 Es un grafo dirigido que no tiene ciclos, es decir, para cada nodo del grafo no hay un camino directo que comience y finalice en dicho nodo. Un vértice se conecta a otro, pero nunca a sí mismo; para cada vértice v, no hay un camino directo que empiece y termine en V.
 Spark soporta el flujo de datos acíclico.
 
-<img src="../_src/assets/Spark_Cluster.jpg"  height="250">
+<img src="../_src/M4/assets/Spark_Cluster.jpg"  height="250">
 
 ### Arquitectura Spark - Hadoop
 
-<img src="../_src/assets/Arquitectura_Spark-Hadoop.jpg"  height="250">
+<img src="../_src/M4/assets/Arquitectura_Spark-Hadoop.jpg"  height="250">
 
 ### RDD 
 
@@ -65,7 +65,7 @@ Es la estructura fundamental de datos de Apache Spark, una colección de objetos
 * Distributed, los datos residen en varios nodos. 
 * DataSet, representa registros de los datos, que el usuario puede cargar en forma de archivos JSON, CSV, texto o bases de datos por medio de JDBC sin una estructura de datos específica.
 
-<img src="../_src/assets/Spark_RDD.jpg"  height="250">
+<img src="../_src/M4/assets/Spark_RDD.jpg"  height="250">
 
 Todas las aplicaciones en Spark poseen un manejador central de programa (Driver) y varios ejecutores que se crean a lo largo del clúster, estas son las computadoras que realizarán las tareas en paralelo y finalmente devolverán los valores al driver, la aplicación central.
 
@@ -78,7 +78,7 @@ Las transformaciones permiten crear un nuevo RDD a partir de uno previamente exi
 Además, los RDD poseen una familiaridad con el paradigma orientado a objetos, lo cual permite que podamos realizar operaciones de bajo nivel a modo. Map, filter y reduce son tres de las operaciones más comunes.
 Una de las grandes ventajas que ofrecen los RDD es la compilación segura; por su particularidad de ejecución perezosa, se calcula si se generará un error o no antes de ejecutarse, lo cual permite identificar problemas antes de lanzar la aplicación. El pero que podemos encontrar con los RDD es que no son correctamente tratados por el Garbage collector y cuando las lógicas de operación se hacen complejas, su uso puede resultar poco práctico, aquí entran los DataFrames.
 
-<img src="../_src/assets/Operaciones_RDD.jpg"  height="250">
+<img src="../_src/M4/assets/Operaciones_RDD.jpg"  height="250">
 
 ### DataFrames
 
@@ -87,7 +87,7 @@ Características
 * Los datos están organizados en columnas nombradas.
 * Es equivalente a una tabla en una base de datos relacional.
 
-<img src="../_src/assets/Spark_DataFrame.jpg"  height="250">
+<img src="../_src/M4/assets/Spark_DataFrame.jpg"  height="250">
 
 Esos componentes fueron agregados en la versión 1.3 de Spark y pueden ser invocados con el contexto espacial de Spark SQL. Como indica su nombre, es un módulo especialmente desarrollado para ser ejecutado con instrucciones parecidas al SQL estándar.
 De la misma forma, como los RDD, estos pueden ser creados a partir de archivos, tablas tipo Hive, bases de datos externas y RDD o DataFrames existentes.
@@ -102,7 +102,7 @@ Características:
 * Verificación de tipos de dato en tiempo de compilación.
 * Disponible sólo en Scala y Java.
 
-<img src="../_src/assets/Spark_DataSet.jpg"  height="250">
+<img src="../_src/M4/assets/Spark_DataSet.jpg"  height="250">
 
 ### Particionado
 
@@ -114,7 +114,7 @@ La partición y replicación son elementos que deben ser analizados según el ti
 
 ## Módulos Spark
 
-<img src="../_src/assets/Modulos_Spark.jpg"  height="250">
+<img src="../_src/M4/assets/Modulos_Spark.jpg"  height="250">
 
 #### Spark Core
 
@@ -155,7 +155,7 @@ https://spark.apache.org/graphx/
 Es un motor de optimización de planes de ejecución, parecido al que usan las bases de datos, pero diseñado para la cantidad de datos propia de Spark. 
 Además de eso, se tiene implementado un optimizador de memoria y consumo de CPU, llamado Tungsten, el cual determina cómo se convertirán los planes lógicos creados por Catalyst a un plan físico.
 
-<img src="../_src/assets/Catalyst_Optimizer.jpg"  height="250">
+<img src="../_src/M4/assets/Catalyst_Optimizer.jpg"  height="250">
 
 ### Enlaces de Referencia:
 
@@ -171,7 +171,7 @@ Es el procesamiento de transacciones por lote.
 Los trabajos que pueden ejecutarse sin la interacción del usuario final, o pueden programarse para ejecutarse según lo permitan los recursos.
 Ej. Reporte anual de ventas.
 
-<img src="../_src/assets/Batch.jpg"  height="250">
+<img src="../_src/M4/assets/Batch.jpg"  height="250">
 
 
 # Procesamiento Streamming - Herramientas
@@ -184,7 +184,7 @@ Ejemplos
 * Clicks en un sitio web
 * Operaciones financieras
 
-<img src="../_src/assets/Streaming.jpg"  height="250">
+<img src="../_src/M4/assets/Streaming.jpg"  height="250">
 
 ## Arquitectura Lambda
 
@@ -193,11 +193,11 @@ Esta arquitectura es atribuida a Nathan Marz, creador de Apache Storm y autor de
 
 ### Capas
 
-<img src="../_src/assets/Lambda_Capas.jpg"  height="250">
+<img src="../_src/M4/assets/Lambda_Capas.jpg"  height="250">
 
 ### Tecnologías
 
-<img src="../_src/assets/Lambda_Tecnologias.jpg"  height="250">
+<img src="../_src/M4/assets/Lambda_Tecnologias.jpg"  height="250">
 
 ### Kafka
 
@@ -209,7 +209,7 @@ Componentes:
 * Consumers: se suscriben a topics
 * Brokers: nodos que forman el cluster
 
-<img src="../_src/assets/Arquitectura_Kafka.jpg"  height="250">
+<img src="../_src/M4/assets/Arquitectura_Kafka.jpg"  height="250">
 
 ### Spark Streaming
 
@@ -217,9 +217,9 @@ Es el módulo de Spark que nos permite ingestar y procesar flujos de datos conti
 Utiliza micro-batching para dividir flujos de datos continuos en batches correspondientes a un periodo de tiempo acotado.
 Posibles fuentes de datos : Kafka, Flume, AWS Kinesis, TCP Sockets, Twitter
 
-<img src="../_src/assets/Spark_Streaming.jpg"  height="250">
+<img src="../_src/M4/assets/Spark_Streaming.jpg"  height="250">
 
-<img src="../_src/assets/Strctured_Streaming.jpg"  height="250">
+<img src="../_src/M4/assets/Strctured_Streaming.jpg"  height="250">
 
 #### Enlaces recomendados:
 
@@ -240,18 +240,18 @@ Posibles fuentes de datos : Kafka, Flume, AWS Kinesis, TCP Sockets, Twitter
 un cluster: https://docs.databricks.com/getting-started/quick-start.html#quick-start<br>
 
 Al registrarse en Databricks seleccionar "Get Started with Community Edition":<br>
-<img src="../_src/assets/community_edition.png"  height="400"><br>
+<img src="../_src/M4/assets/community_edition.png"  height="400"><br>
 
 * DataFrames (Python): Cargar el notebook "Dataframes (Python).ipynb"<br>
 * Datasets (Scala): https://docs.databricks.com/_static/notebooks/getting-started/iotdevicegeoipds.html<br>
 1.1) Crear Cluster<br>
-<img src="../_src/assets/Databricks_1.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Databricks_1.jpg"  height="250"><br>
 1.2) Importar Notebook<br>
-<img src="../_src/assets/Databricks_2.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Databricks_2.jpg"  height="250"><br>
 1.3) Ingresar URL<br>
-<img src="../_src/assets/Databricks_3.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Databricks_3.jpg"  height="250"><br>
 1.4) Adjuntar Cluster y Ejecutar<br>
-<img src="../_src/assets/Databricks_4.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Databricks_4.jpg"  height="250"><br>
 2) Spark Streaming: <br>
 En Databricks ejectuar el notebook:
 * https://docs.databricks.com/_static/notebooks/structured-streaming-python.html
@@ -260,19 +260,19 @@ En Databricks ejectuar el notebook:
 * https://github.com/ververica/sql-training/tree/master/slides <br>
 * https://github.com/ververica/sql-training/wiki/Setting-up-the-Training-Environment <br>
 3.1) Entorno<br>
-<img src="../_src/assets/Flink_1.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Flink_1.jpg"  height="250"><br>
 3.2) Flink Web UI<br>
-<img src="../_src/assets/Flink_2.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Flink_2.jpg"  height="250"><br>
 3.3) Ejecutar Consulta<br>
-<img src="../_src/assets/Flink_3.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Flink_3.jpg"  height="250"><br>
 3.4) Visualizar Resultados<br>
-<img src="../_src/assets/Flink_4.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Flink_4.jpg"  height="250"><br>
 3.5) Job Status<br>
-<img src="../_src/assets/Flink_5.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Flink_5.jpg"  height="250"><br>
 3.6) Detalle de Ejecución<br>
-<img src="../_src/assets/Flink_6.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Flink_6.jpg"  height="250"><br>
 4) Cluster Spark:<br>
-<img src="../_src/assets/Entorno_Spark.jpg"  height="250"><br>
+<img src="../_src/M4/assets/Entorno_Spark.jpg"  height="250"><br>
 * git clone https://github.com/soyHenry/DS-M4-Cluster_Spark<br>
 * Modificar los yml de 512m a 4098m<br>
 * sudo docker-compose up<br>
