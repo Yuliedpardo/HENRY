@@ -46,16 +46,16 @@ Entidad: Carrera.<br>
 Atributos: Nombre, Estado, ect.<br>
 Relaciones: Una carrera "tiene" cohortes.
 
-![Modelo E-R](../_src/assets/ER.PNG)
+![Modelo E-R](/_src/M2/assets/ER.PNG)
 <br>
 <br>
 Hemos desarrollado los conceptos más importantes de este modelo, pero aún nos falta entender como se rigen las relaciones entre las entidades.<br>
 Las relaciones aportan dos grandes características a una base datos, la no duplicidad y la integridad referencial. Se representan mediante dos elementos denominados "primary key" y "foreing key". Una primary key, es un atributo que representa de manera única e inequívoca a un elemento (registro) de la entidad, en el caso del alumno una primary key puede ser su N° de cédula de identidad o N° de Inscripción. Si se desea representar a ese mismo alumno en otra entidad como por ejemplo una cohorte, basta con incluir dentro de la tabla a la primary key como uno de sus campos, quedando representando ese alumno a través de su cédula de identidad/N° de Inscripción como una Foreing Key. Para resumir, una Foreing Key es generalemente una Primary Key en otra tabla.<br>
 Las relaciones a su vez pueden ser de uno a uno (1-1), de uno a muchos (1-M) ó de muchos a muchos (M-M), a esto, se lo denomina cardinalidad. En nuestro ejemplo, un alumno de Henry solo puede cursar en una cohorte, por lo que tenemos una relación de 1-1; esta restricción es generalmente impuesta por el modelo de negocios. En otros modelos de negocios como el de los cursos On-Demand, un alumno podría hacer varios cursos a la vez por lo que la relación sería de 1-M (claro que en ese caso no tendrías la solidez y acompañamiento de Henry 😊).
 
-![Relaciones1](../_src/assets/relaciones.png)
+![Relaciones1](/_src/M2/assets/relaciones.png)
 
-![Relaciones2](../_src/assets/pk-fk.png)
+![Relaciones2](/_src/M2/assets/pk-fk.png)
 
 **Tipo de datos:**
 

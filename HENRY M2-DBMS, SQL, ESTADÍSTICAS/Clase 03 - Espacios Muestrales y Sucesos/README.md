@@ -22,10 +22,10 @@ EVENTO
 Un evento es una colección de puntos muestrales.
 
 ##### Resultados de un estudio en base a observación de frecuencias:<br>
-![Eventos](../_src/assets/proyectoprob.PNG)
+![Eventos](/_src/M2/assets/proyectoprob.PNG)
 
 ##### Asignación de probabilidades:<br>
-![Eventos2](../_src/assets/proyectoprob2.PNG)
+![Eventos2](/_src/M2/assets/proyectoprob2.PNG)
 
 Considere que al encargado del proyecto anterior le interesa conocer la probabilidad de terminar el proyecto en 10 meses o menos. 
 En la primer tabla aparecen los puntos muestrales (2, 6), (2, 7), (2, 8), (3, 6), (3, 7), (4, 6) correspondientes a
@@ -109,7 +109,7 @@ Ejemplos:
 - Sucesos precio de la acción sube, precio de la acción baja, precio de la acción no cambia excluyentes.<br>
 - Sucesos origen de los autos y edad de los compradores, según la tabla de contigencias.<br>
 
-![Sucesos](../_src/assets/sucesos.PNG)
+![Sucesos](/_src/M2/assets/sucesos.PNG)
 
 Si elegimos aleatoriamente un auto vendido, en este caso los sucesos:
 - Auto Nacional (N) o Auto Importado (I) son excluyentes (no se presentan simultáneamente). <br>
@@ -138,12 +138,12 @@ Antes de presentar la ley de la adición es necesario ver dos conceptos relacion
 UNIÓN DE DOS EVENTOS<br>
 La unión de A y B es el evento que contiene todos los puntos muestrales que pertenecen a A o a B o a ambos. La unión se denota "A U B". 
 
-![Union](../_src/assets/union.PNG)
+![Union](/_src/M2/assets/union.PNG)
 
 INTERSECCIÓN DE DOS EVENTOS<br>
 Dados dos eventos A y B, la intersección de A y B es el evento que contiene los puntos muestrales que pertenecen tanto a A como a B.
 
-![Intersección](../_src/assets/inter.PNG)
+![Intersección](/_src/M2/assets/inter.PNG)
 
 La ley de la adición proporciona una manera de calcular la probabilidad de que ocurra el evento A o el evento B o ambos. En otras palabras, la ley de la adición se emplea para calcular la probabilidad de la unión de los dos eventos.
 
@@ -185,7 +185,7 @@ Se dice que dos eventos son mutuamente excluyentes si no tienen puntos muestrale
 
 Los eventos A y B son mutuamente excluyentes si, cuando un evento ocurre, el otro no puede ocurrir. Por tanto, para que A y B sean mutuamente excluyentes, se requiere que su intersección no contenga ningún punto muestral. En este caso P(A ∩ B) = 0. 
 
-![Excluyentes](../_src/assets/excluyentes.PNG)
+![Excluyentes](/_src/M2/assets/excluyentes.PNG)
 
 La ley de la adición se expresa como sigue:
 
@@ -224,7 +224,7 @@ En una sola realización de un experimento aleatorio, la probabilidad de ocurren
 
 Mientras que la ley de las suma de probabilidades sirve para calcular la probabilidad de la unión de dos eventos, la ley de la multiplicación es útil para calcular la probabilidad de la intersección de dos eventos. La ley de la multiplicación se basa en la definición de probabilidad condicional.
 
-![Multiplicación](../_src/assets/multipli.PNG)
+![Multiplicación](/_src/M2/assets/multipli.PNG)
 
 ##### Ejemplo
 
@@ -259,11 +259,11 @@ Dos sucesos o eventos son condicionales cuando la ocurrencia o no ocurrencia de 
 ##### Ejemplo
 Como ejemplo de la probabilidad condicional, considere el caso de las promociones de los agentes de policía de una determinada ciudad. La fuerza policiaca consta de 1200 agentes, 960 hombres y 240 mujeres. De éstos, en los últimos dos años, fueron promovidos 340. En la tabla 4.4 se muestra cómo quedaron repartidas estas promociones entre los hombres y mujeres:
 
-![Policia](../_src/assets/policia.PNG)
+![Policia](/_src/M2/assets/policia.PNG)
 
 Después de analizar el registro de las promociones, un comité femenil protestó, ya que habían sido promovidos 288 agentes hombres, frente a sólo 36 mujeres. Los directivos de la fuerza policiaca argumentaron que el número de mujeres promovidas no se debía a una discriminación, sino a que el número de mujeres que son agentes de policía es una cantidad pequeña. Ahora verá cómo emplear la probabilidad condicional para analizar esta acusación de discriminación.
 
-![Policia 2](../_src/assets/policia2.PNG)
+![Policia 2](/_src/M2/assets/policia2.PNG)
 
 Considera
 
@@ -299,7 +299,7 @@ P(A M)= 288/960 = (288/1200) / (960/1200) = 0.24 / 0.80 = 0.30
 Por tanto, la probabilidad condicional P(A | M) se calcula como la razón entre P(A ∩ M) y la probabilidad margina P(M).<br>
 P(A | M) = P(A ∩ M) / P(M) = 0.24 / 0.80 = 0.30
 
-![Condicional](../_src/assets/condicional.PNG)
+![Condicional](/_src/M2/assets/condicional.PNG)
 
 Sin embargo, la cuestión relevante en el caso de la discriminación tiene que ver con las probabilidades condicionales P(A | M) y P(A | W). Es decir, ¿cuál es la probabilidad de que un agente de la policía sea promovido dado que es hombre y cuál es la probabilidad que un agente de la policía sea promovido dado que es mujer? Si estas dos probabilidades son iguales, no hay fundamentos para un argumento de discriminación ya que las oportunidades de ser promovidos son las mismas para agentes de la policía hombres o mujeres. Pero, si hay diferencia entre estas dos probabilidades condicionales se confirmará que los hombres y mujeres agentes de policía son considerados de
 manera distinta cuando se trata de las decisiones para promoverlos.
@@ -372,7 +372,7 @@ print(probabilidad)
 - c. Un estudiante de estadística argumenta que los conceptos de eventos mutuamente excluyentes y eventos independientes son en realidad lo mismo y que si los eventos son mutuamente excluyentes deben ser también independientes. ¿Está usted de acuerdo? Use la información sobre las probabilidades para justificar su respuesta.
 
 Dada la siguiente tabla:<br>
-![Sucesos](../_src/assets/sucesos.PNG)<br>
+![Sucesos](/_src/M2/assets/sucesos.PNG)<br>
 
 3. Si en la concesionaria se seleccionan dos ventas con reposición (Los sucesos son independientes.). Hallar la probabilidad de que las ventas sean:<br>
  
@@ -393,7 +393,7 @@ Dada la siguiente tabla:<br>
  - a. De un comprador de “menos de 40 años” y de uno de "entre 40 y 50 años". Sin importar el orden.
 
  6. Debido al aumento de los costos de los seguros, en un país 43 millones de personas, hay personas que no cuentan con un seguro médico. En la tabla siguiente se muestran datos muestrales representativos de la cantidad de personas que cuentan con seguro médico:<br>
- ![Seguro](../_src/assets/seguro.PNG)
+ ![Seguro](/_src/M2/assets/seguro.PNG)
 
 - a. Con estos datos elabore una tabla de probabilidad conjunta y úsela para responder las preguntas restantes.
 - b. ¿Qué indican las probabilidades marginales acerca de la edad de la población?

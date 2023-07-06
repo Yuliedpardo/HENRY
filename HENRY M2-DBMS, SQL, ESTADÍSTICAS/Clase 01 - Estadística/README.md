@@ -56,7 +56,7 @@ Al recoger datos relativos a las características de un grupo de individuos u ob
 Población es un conjunto de elementos, que responden a una determinada característica.
 Es un conjunto homogéneo de elementos. El concepto de población en Estadística va más allá de la clásica definición que se da en la Demografía, esto es, la población de seres humanos exclusivamente. En la actividad estadística una población puede estar constituida por elementos de cualquier tipo, no solamente por seres humanos. Por ejemplo, se puede hablar de la población de viviendas de un barrio; de la población de comprobantes contables de una empresa; de la población de alumnos en Henry, etc.
 
-![Poblacion](../_src/assets/pobmuestra.PNG)
+![Poblacion](/_src/M2/assets/pobmuestra.PNG)
 
 ### Distribución de frecuencias
 
@@ -71,14 +71,14 @@ Para construir una distribución de frecuencias se debe:
 
 A continuación un ejemplo con las edades de compradores de automóviles:
 
-![Frecuencias](../_src/assets/frecuencias.PNG)
+![Frecuencias](/_src/M2/assets/frecuencias.PNG)
 
 ### Histograma
 
 El Histograma es un gráfico de la distribución de frecuencias, que se construye con rectángulos de superficie proporcional al producto de la amplitud por la frecuencia absoluta (o relativa) de cada uno de los intervalos de clase.<br>
 Está formado por una serie de rectángulos, la variable de interés se representa en el eje horizontal, el número o porcentaje de observaciones se representa en el eje vertical. La base está sobre el eje horizontal y el centro en el punto medio. Los extremos de cada rectángulo coinciden con los verdaderos límites. La longitud es el tamaño de cada intervalo de clase y la superficie es proporcional a la frecuencia. La superficie total del histograma representa el 100 % de los datos.
 
-![Histograma](../_src/assets/histograma.PNG)
+![Histograma](/_src/M2/assets/histograma.PNG)
 
 
 ```python
@@ -95,7 +95,7 @@ plt.ylabel('Frecuencia')
 plt.show() 
  
 ```
-![Histograma2](../_src/assets/histopy.PNG)
+![Histograma2](/_src/M2/assets/histopy.PNG)
 
 ### Medidas de tendencia central y de posición
 
@@ -103,19 +103,19 @@ plt.show()
 - La dispersión se refiere a la separación de los datos en una distribución, es decir, al grado en que las observaciones se separan de la tendencia central.<br>
 - El sesgo se produce cuando al trazar una linea vertical que pase por el punto más alto de la curva dividirá su área en dos partes que no son iguales. Cuando se da el caso de que cada parte es una imagen de espejo de la otra, esta cruva se denomina simétrica. Si la curva esta sesgada hacia la derecha, se considera positivamente sesgada y si el sesgo se pronuncia hacia la izquierda, se denomina negativamente sesgada.<br>
 
-![Sesgo](../_src/assets/sesgo.PNG)   ![Simetria](../_src/assets/simetrica.PNG)
+![Sesgo](/_src/M2/assets/sesgo.PNG)   ![Simetria](/_src/M2/assets/simetrica.PNG)
 
 - La curtosis se denomina a la medición de la pronunicación de una curva. Puede que dos curvas tengan la misma posición central y la misma dispersión, y ambas son simétricas. En este caso estadísticos dicen que tienen un grado diferente de curtosis.
 
 
-![Simetria](../_src/assets/curtosis.PNG)
+![Simetria](/_src/M2/assets/curtosis.PNG)
 
 #### Media aritmética
 
 Casi siempre, cuando nos referimos al “promedio” de algo, estamos hablando de la media aritmética. En una muestra de una población que consiste en n observaciones (con n minúscula), la media se denomina con x (x barra). Las medidas calculadas para una muestra se conocen como estadísticos.
 La notación es diferente cuando calculamos medidas para la población entera, es decir, para el grupo que contiene a todos los elementos que estamos describiendo. La media de una población se simboliza con la letra griega mu.
 
-![Media](../_src/assets/media.PNG)   ![Media 1](../_src/assets/media2.PNG)
+![Media](/_src/M2/assets/media.PNG)   ![Media 1](/_src/M2/assets/media2.PNG)
 
 Ventajas:
 
@@ -137,7 +137,7 @@ print(data.mean()) # Media
 
 print(np.mean(data)) #Media numpy
 ```
-![Media](../_src/assets/pond.PNG)     ![Media](../_src/assets/geom.PNG) 
+![Media](/_src/M2/assets/pond.PNG)     ![Media](/_src/M2/assets/geom.PNG) 
 
 #### La Mediana 
 
@@ -160,7 +160,7 @@ print(np.median(data)) # Mediana numpy
 
 ```
 
-![Mediana](../_src/assets/mediana.PNG) 
+![Mediana](/_src/M2/assets/mediana.PNG) 
 
 #### La Moda
 
@@ -183,7 +183,7 @@ print(stats.mode(data)) #Moda de stats en scipy
 
 ```
 
-![Mediana](../_src/assets/sesgoscurva.PNG)
+![Mediana](/_src/M2/assets/sesgoscurva.PNG)
 
 Cuando trabajamos problemas de estadística, debemos decidir si vamos a utilizar la media, la mediana o la moda como medidas de tendencia central. Las distribuciones simétricas que sólo contienen una moda siempre tienen el mismo valor para la media, la mediana y la moda. En esos casos, no es necesario escoger la medida de tendencia central, pues ya está hecha la selección.<br>
 En una distribución con sesgo positivo (es decir, sesgada a la derecha), la moda todavía se encuentra en el punto más alto de la distribución, la mediana está a la derecha de la moda y la media se encuentra todavía más a la derecha de la moda y la mediana.<br>
@@ -196,7 +196,7 @@ En cualquier otro caso, no existen guías universales para la aplicación de la 
 Observa la imagen debajo de este párrafo, la media de las tres curvas es la misma, pero la curva A tiene menor separación (o
 variabilidad) que la curva B, y ésta tiene menor variabilidad que la C. Si medimos sólo la media de estas tres distribuciones, estaremos pasando por alto una diferencia importante que existe entre las tres curvas. Al igual que sucede con cualquier conjunto de datos, la media, la mediana y la moda sólo nos revelan una parte de la información que debemos conocer acerca de las características de los datos. Para aumentar nuestro entendimiento del patrón de los datos, debemos medir también su dispersión, separación o variabilidad.
 
-![Dispesión](../_src/assets/dispersion.PNG)
+![Dispesión](/_src/M2/assets/dispersion.PNG)
 
 #### El Rango
 
@@ -208,7 +208,7 @@ Cada población tiene una varianza, su símbolo es sigma cuadrada. Para calcular
 
 Para poder realizar una interpretación intuitiva de la varinza, debemos hacer un cambio significativo en la varianza y que en consecuencia, sea menos confusa. Esta medida se conoce como la desviación estándar y es la raíz cuadrada de la varianza. La desviación estándar, entonces, queda en las mismas unidades que los datos originales. Si utilizaramos la varianza, tendríamos nuestros valores al cuadrado, lo cual resulta complejo de entender.
 
-![Varianza](../_src/assets/varianza.PNG)
+![Varianza](/_src/M2/assets/varianza.PNG)
 
 
 ```python
@@ -227,7 +227,7 @@ print(np.std(data)) #Desvío estándar Numpy
 
 ```
 
-![Desvio](../_src/assets/desvioest.PNG)
+![Desvio](/_src/M2/assets/desvioest.PNG)
 
 #### Coeficientes de variación
 
@@ -235,7 +235,7 @@ No podemos conocer la dispersión de un conjunto de datos hasta que conocemos su
 la desviación estándar con la media.Necesitamos es una medida relativa que nos proporcione una estimación de la magnitud
 de la desviación respecto a la magnitud de la media. El coeficiente de variación es una de estas medidas relativas de dispersión. Relaciona la desviación estándar y la media, expresando la desviación estándar como porcentaje de la media. La unidad de medida, entonces, es “porcentaje”, en lugar de las unidades de los datos originales.
 
-![Variacion](../_src/assets/variacion.PNG)
+![Variacion](/_src/M2/assets/variacion.PNG)
 
 =======
 ## Enlaces recomendados

@@ -6,7 +6,7 @@
 
 ## Distribuciones de probabilidad
 
-![Distribuciones](../_src/assets/distributionprob.png)
+![Distribuciones](/_src/M2/assets/distributionprob.png)
 
 Una variable aleatoria es un suceso o evento numérico cuyo valor se determina por medio de un proceso aleatorio. Cuando a todos los posibles valores numéricos de una variable aleatoria se le asignan valores de probabilidad, ya sea mediante un listado o una función matemática el resultado es una distribución de probabilidad. La suma de las probabilidades de todos los resultados numéricos posibles debe ser igual a 1.<br>
 En resumen, una distribución de probabilidad es una función que puede asignar valores de probabilidad a cada estado del espacio muestral.
@@ -21,19 +21,19 @@ p1 + p2 +,…,+ pN = 1
 
 ### Ejemplo: <br>
 
-![autos](../_src/assets/tablaest.PNG)
+![autos](/_src/M2/assets/tablaest.PNG)
 
 
 Si en la concesionaria se seleccionan tres ventas con reposición y deseamos hacer una distribución de probabilidad del número de autos nacionales, los resultados posibles serían:
 
-![tablaautos](../_src/assets/tablaautos.PNG)
+![tablaautos](/_src/M2/assets/tablaautos.PNG)
 
 Hay ocho resultados posibles. Para obtener la distribución de probabilidad, aplicamos la regla de la adición y de la multiplicación siendo x el número de autos importados. Si las ventas seleccionadas fueran 2, los resultados posibles serían 4.
 
 
-![autoscalculo](../_src/assets/autoscalculo.PNG)
+![autoscalculo](/_src/M2/assets/autoscalculo.PNG)
 
-![Distribucion](../_src/assets/distr.PNG)
+![Distribucion](/_src/M2/assets/distr.PNG)
 
 La Distribución de Probabilidad constituye un sistema completo de sucesos. Es análoga a una distribución de frecuencias relativas, con probabilidad en lugar de frecuencia relativa. De manera que podemos pensar en las distribuciones de probabilidad como formas teóricas o ideales en el límite, de distribuciones de frecuencia relativa cuando el número de observaciones es muy 
 grande. Por eso podemos imaginarnos a las distribuciones de probabilidad como si fueran distribuciones de poblaciones, mientras que las distribuciones de frecuencia relativa son distribuciones de muestras de esa población.<br>
@@ -53,7 +53,7 @@ Por otro lado existen ciertas normas a la hora de nombrar variables:
 5. La condición de cierre se verifica realizando la sumatoria de las probabilidades.<br>
 6. La distribución de probabilidad en el caso de una variable aleatoria discreta se denomina genéricamente función de probabilidad.<br>
 
-![Ejemplos1](../_src/assets/vardisc.PNG)
+![Ejemplos1](/_src/M2/assets/vardisc.PNG)
 
 #### Si la variable aleatoria es continua:
 1. Puede tomar cualquier valor en un determinado campo de variación.<br>
@@ -64,7 +64,7 @@ Por otro lado existen ciertas normas a la hora de nombrar variables:
 6. La condición de cierre se verifica efectuando la integral de la función en todo el campo de variación de la variable aleatoria.<br>
 7. La denominación genérica de la distribución de probabilidad en el caso continuo es la de función de densidad debido a que se considera que las probabilidades adquieren densidad, es decir que se "adensan", convirtiéndose en áreas.
 
-![Ejemplos2](../_src/assets/vardisc1.PNG)
+![Ejemplos2](/_src/M2/assets/vardisc1.PNG)
 
 #### Histograma
 
@@ -127,7 +127,7 @@ Otro ejemplo, considera a un vendedor de seguros que visita a 10 familias elegid
 3. Las probabilidades de que haya compra y de que no haya compra se supone que son iguales en todas las visitas, siendo p=0.10 y 1-p =0.90.
 4. Los ensayos son independientes porque las familias se eligen en forma aleatoria.
 
-![Binomial](../_src/assets/binom.png)
+![Binomial](/_src/M2/assets/binom.png)
 
 p= probabilidad de éxito.<br>
 q= Probabilidd de fracaso.<br>
@@ -180,7 +180,7 @@ plt.xlabel('valores') #Esta función etiqueta el eje X.
 plt.show() #Esta función muestra las figuras
 ```
 
-![Función Binomial](../_src/assets/funcionbinomial.PNG)
+![Función Binomial](/_src/M2/assets/funcionbinomial.PNG)
 
 [Binomial - Matemóvil](https://www.youtube.com/watch?v=-XxZGvNClkg)
 
@@ -189,7 +189,7 @@ Una variable aleatoria sigue una distribución de Bernoulli si solo tiene dos re
 Ahora, si lanzamos una moneda varias veces, la suma de las variables aleatorias de Bernoulli seguirá una distribución binomial.<br>
 Por ejemplo, supongamos que lanzamos una moneda 5 veces y queremos saber la probabilidad de obtener caras k veces. Diríamos que la variable aleatoria X sigue una distribución Binomial. ¿Queda más claro?. Muy bien.
 
-![BinomialBernoulli](../_src/assets/binomberno.png)
+![BinomialBernoulli](/_src/M2/assets/binomberno.png)
 
 ```Python
 # Graficando Bernoulli
@@ -217,7 +217,7 @@ PROPIEDADES DE UN EXPERIMENTO DE POISSON
 1. La probabilidad de ocurrencia es la misma para cualesquiera dos intervalos de la misma magnitud.
 2. La ocurrencia o no-ocurrencia en cualquier intervalo es independiente de la ocurrencia o no-ocurrencia en cualquier otro intervalo. La varibale aleatoria es el número de veces que ocurre un evento en un intervalo de tiempo, distancia, area, volumen u otra similar. 
 
-![Poisson](../_src/assets/poisson.PNG)
+![Poisson](/_src/M2/assets/poisson.PNG)
 
 Suponga que desea saber el número de llegadas, en un lapso de 15 minutos, a un cajero automático de un banco. Si se puede suponer que la probabilidad de llegada de los clientes es la misma en cualesquiera dos lapsos de la misma duración y si la llegada o no–llegada de una persona en cualquier lapso es independiente de la llegada o no–llegada de una persona en cualquier otro lapso, se puede aplicar la función de probabilidad de Poisson. Dichas condiciones se satisfacen y en un análisis de datos pasados encuentra que el número promedio de automóviles que llegan en un lapso de 15 minutos es 10; en este caso use la función de probabilidad siguiente:
 
@@ -296,7 +296,7 @@ f(0) = [5! / (0! * 5!) * 7! / (3! * 4!)] / [12! / (3! * 9!)] = 1 * 35 / 220 = 0.
 
 Si la probabilidad de cero fusibles defectuosos es f(0) = 0.1591, se concluye que la probabilidad de hallar por lo menos un fusible defectuoso debe ser 1 - 0.1591 = 0.8409. Así, existe una probabilidad razonablemente alta de que el inspector encuentre por lo menos un fusible defectuso.
 
-![Hipergeometrica](../_src/assets/FormulaHipergeometrica.png)
+![Hipergeometrica](/_src/M2/assets/FormulaHipergeometrica.png)
 
 Ejemplo:<br>
 Una empresa que importa los autos que vende una concesionaria, desea hacer una encuesta de satisfacción a los compradores de estos autos. De una muestra de 80 autos, 30 son importados. Si se seleccionan 9 clientes. ¿Cuál es la probabilidad de que haya 2 que compraron autos importados?.
@@ -346,7 +346,7 @@ La distribución de probabilidad más usada para describir variables aleatorias 
 Esta dada por una función de densidad y la probabilidad se obtiene en base a una variable aleatoria xi que se encuentra entre dos valores arbitrarios de x1 y x2, la cual está dada por el área A bajo la curva cuyo valor se encuentra integrando la función f(x) entre ambos valores, es decir que en tanto la probabilidad en un punto cualquiera no tiene sentido.<br>
 La solución práctica para obtener esas probabilidades consiste en utilizar la Tabla de Probabilidades apropiada para calcular cualquier probabilidad en el caso normal, sin que importe cuáles son los valores particulares de la variable aleatoria ni los parámetros de la distribución.<br>
 
-![Función Normal](../_src/assets/funcionnormal.PNG)
+![Función Normal](/_src/M2/assets/funcionnormal.PNG)
 
 Las siguientes son observaciones importantes acerca de las características de las distribuciones normales.
 1. Toda la familia de distribuciones normales se diferencia por medio de dos parámetros: la media μ y la desviación estándar σ.
@@ -361,11 +361,11 @@ Las siguientes son observaciones importantes acerca de las características de l
   - c. 99.7% de los valores de una variable aleatoria normal se encuentran más o menos tres desviaciones estándar de la media.
 
 
-![Normal](../_src/assets/normalareas.PNG)
+![Normal](/_src/M2/assets/normalareas.PNG)
 
 La distribución normal requiere al estandarización de las variables mediante la siguiente fórmula:<br>
 
-![Ejemplos2](../_src/assets/estandar.PNG)
+![Ejemplos2](/_src/M2/assets/estandar.PNG)
 
 X = Variable aleatoria.<br>
 mu = Media.
@@ -432,10 +432,10 @@ plt.show()
 ```
 
 
-![Distribucion1](../_src/assets/probdist.PNG)
+![Distribucion1](/_src/M2/assets/probdist.PNG)
 
 
-![Distribucion2](../_src/assets/probdist2.PNG)
+![Distribucion2](/_src/M2/assets/probdist2.PNG)
 
 
 ## Homework <br> 

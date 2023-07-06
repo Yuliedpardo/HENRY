@@ -18,7 +18,7 @@ Ahora bien, surgen algunas preguntas:
 
 * ¿Cómo puedo medir si un camino es más óptimo que otro?
 
-![unaImagenConBoxShadow](../_src/assets/01_imagen01.jpg)
+![unaImagenConBoxShadow](/_src/M0/assets/01_imagen01.jpg)
 
 Cualquiera de las siguiente, podrían ser una solución:
 * Derecha, Derecha, Arriba, Arriba, Derecha, Derecha, Arriba, Arriba, Arriba, Derecha, Derecha, Arriba

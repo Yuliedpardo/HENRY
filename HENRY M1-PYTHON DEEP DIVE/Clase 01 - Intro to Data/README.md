@@ -9,47 +9,47 @@
 
 Posiblemente la primera computadora fue creada por los **antiguos griegos** el cual tenia el propósito de calcular las posiciones del Sol, Luna y algunos otros cuerpos celestes.
 ##### [Mecanismo Anticitera](https://es.wikipedia.org/wiki/Mecanismo_de_Anticitera)
-<img src="../_src/assets/00-IntroToCS/computadora-griega.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/computadora-griega.jpg"  height="250">
 
 Miles de años después se creo el [**telar de Jacquard**](https://es.wikipedia.org/wiki/Telar_de_Jacquard), que funcionaba con tarjetas que se creaban con pequeños huecos que representaban la información que el telar tenía que hacer en un pedazo de tela.
 
-<img src="../_src/assets/00-IntroToCS/Telar-de-Jacquard.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/Telar-de-Jacquard.jpg"  height="250">
 <h5>Telar de Jacquard</h5>
 
 Después llego el [**motor analítico de Charles Babbage**](https://es.wikipedia.org/wiki/M%C3%A1quina_anal%C3%ADtica#:~:text=La%20m%C3%A1quina%20anal%C3%ADtica%20es%20el,hasta%20su%20muerte%20en%201871.), el cual ocupó la tecnología de punta en su época para poder realizar cálculos.
 
-<img src="../_src/assets/00-IntroToCS/motor-babbage.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/motor-babbage.jpg"  height="250">
 <h5>Motor analítico de Charles Babbage</h5>
 
 A finales del siglo XIX el gobierno de EE.UU. tenia serios problemas para realizar los censos como mandaba la constitución. En este momento fue cuando llegó la [**máquina tabuladora**](https://es.wikipedia.org/wiki/Tabuladora), la cual se utilizó para realizar los censos con tarjetas, obteniendo resultados más rápidos y certeros.
 
-<img src="../_src/assets/00-IntroToCS/maquina-tabuladora.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/maquina-tabuladora.jpg"  height="250">
 <h5>Máquina Tabuladora</h5>
 
 Antiguamente existía la **profesión de computadora**, la cual eran personas que se dedicaban a seguir ciertas instrucciones para obtener los resultados. Sin embargo estos resultados estaban plagados de errores. Al inicio del siglo XX ya existían compañías que tenían la necesidad de realizar cálculos exactos y a gran escala. Es aquí donde llegan **Alan Turing** y **Alonzo Church** con la idea de que todos los algoritmos desarrollados por la humanidad podían ser reducidas a una máquina imaginaria, que tuviera una cinta infinita donde apuntarían símbolos y estos símbolos se pudieran manipular. Gracias a esa idea, se comenzó la carrera para crear la primera computadora electrónica, el cual fue el **ENIAC**.
 
-<img src="../_src/assets/00-IntroToCS/church_alonzo.jpg"  height="250">
-<img src="../_src/assets/00-IntroToCS/alan-turing.jpg"  height="250">
-<img src="../_src/assets/00-IntroToCS/eniac.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/church_alonzo.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/alan-turing.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/eniac.jpg"  height="250">
 <h5>Alonzo Chruch, Alan Turing y la maquina ENIAC respectivamente.</h5>
 
 **John von Neumann** se dio cuenta de que en el hardware no solo se podía almacenar el poder de cómputo, también los programas para ejecutar. A esta arquitectura se le llama la **arquitectura de von Neumman.** De esta arquitectura nace la máquina **EDVAC** (Electronic Discrete Automatic Computer).
 
-<img src="../_src/assets/00-IntroToCS/neumann-edvac.jpeg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/neumann-edvac.jpeg"  height="250">
 <h5>John von Neumann junto a la máquina EDVAC.</h5>
 
-<img src="../_src/assets/00-IntroToCS/arquitectura-neumann.png"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/arquitectura-neumann.png"  height="250">
 <h5>La arquitectura von Neumann.</h5>
 
 Con la llegada de los **microchips** llegó la pauta para la computación de hoy en día. Estos microchips, con el tiempo, lograron ser tan pequeños gracias a la tecnología de la [**fotónica.**](https://es.wikipedia.org/wiki/Fot%C3%B3nica)
 
-<img src="../_src/assets/00-IntroToCS/microchips.jpg"  height="250">
-<img src="../_src/assets/00-IntroToCS/oblea-silicio.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/microchips.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/oblea-silicio.jpg"  height="250">
 <h5>Microchip y Oblea de Silicio respectivamente.</h5>
 
 Ya en nuestros tiempos llegó la **nube**, que son data centers que no son más que miles o millones de computadoras.
 
-<img src="../_src/assets/00-IntroToCS/nube.jpg"  height="250">
+<img src="/_src/M1/assets/00-IntroToCS/nube.jpg"  height="250">
 <h5>Sala de servidores de una nube.</h5>
 
 ## Computer Science
@@ -75,7 +75,7 @@ Para poder entender el funcionamiento de una computadora y sus orígenes, antes 
 
 Un circuito eléctrico es una interconexión de componentes eléctricos que transporta corriente eléctrica a través de una trayectoria cerrada. Imaginemos una batería, ahora pensemos que dicha batería está conectada a través de cables a una lámpara, si deseamos prender la lámpara necesitamos que la misma reciba corriente, ¿Cómo haríamos eso? Podemos tener un interruptor que, al cerrarlo prende la lámpara.
 
-![AND Operator](../_src/assets/00-IntroToCS/AND.png)
+![AND Operator](/_src/M1/assets/00-IntroToCS/AND.png)
 
 En el caso ilustrado para poder prender la lámpara necesitamos cerrar tanto A como B. Esto se debe a que si cierro A pero no B, la energía de la batería logra llegar hasta el interruptor B, pero dado que el interruptor B está abierto, la energía se pierde y por lo tanto no llega al otro extremo derecho, no llega a la lámpara.
 
@@ -84,7 +84,7 @@ En el caso de que tanto el interruptor A como el interruptor B estén cerrados, 
 
 Una alternativa, sería colocar dos interruptores de forma paralela de forma tal que si cierro uno, pero mantengo el otro abierto, la energía tiene un camino alternativo por donde pasar.
 
-![OR Operator](../_src/assets/00-IntroToCS/OR.png)
+![OR Operator](/_src/M1/assets/00-IntroToCS/OR.png)
 
 En este caso, si cierro el interruptor A pero mantengo el interruptor B abierto, la lámpara se prende igual. Esto se debe a que la energía de la batería pasa por el camino cerrado hasta alcanzar la lámpara. Análogo es el caso en el que el interruptor A está abierto y el interruptor B cerrado.
 
@@ -242,4 +242,4 @@ Ahora leemos de abajo hacia arriba los restos, al concatenarlos, obtendremos nue
 Recordemos que las computadoras, sólo entienden ceros (0) y unos (1). Ahora bien, ¿Nosotros escribimos en 1's y 0's? No.
 Existen lenguajes de alto y bajo nivel que luego deben ser traducidos a lenguaje maquina, lenguaje interpretable por la computadora. La "traducción" la llamaremos compilación.
 
-![Compilar](../_src/assets/00-IntroToCS/compilation.png)
+![Compilar](/_src/M1/assets/00-IntroToCS/compilation.png)

@@ -37,7 +37,7 @@ Cuando se realiza el modelo matemático de un fenómeno y en este se pueden mane
 
 * Ejemplo: Cuando tenemos una inversión c a una tasa r, podemos calcular su Valor Futuro. El modelo es determinístico, puesto que tiene una inversión fija c a una tasa fija r; por tanto, es posible predecir el resultado que ocurrirá al cabo de n años mediante el uso de la siguiente fórmula:
 
-![INTERES COMPUESTO](../_src/assets/IC.png)
+![INTERES COMPUESTO](/_src/M2/assets/IC.png)
 
 Si inivirtieras $120.000 y manteniendo la inversión por 5 años al 8% -> 120.000 (1+0.08)^5 = 176.319,369216
 
@@ -77,7 +77,7 @@ Existen también experimientos del tipo determinísticos que se basan en la apli
 
 En el contexto de la probabilidad, un experimento es definido como un proceso que genera resultados definidos. Y en cada una de las repeticiones del experimento, habrá uno y sólo uno de los posibles resultados experimentales. A continuación se dan varios ejemplos de experimentos con sus correspondientes resultados.
 
-![Prbabilistico](../_src/assets/modprob.PNG)
+![Prbabilistico](/_src/M2/assets/modprob.PNG)
 
 Al especificar todos los resultados experimentales posibles, está definiendo el espacio muestral de un experimento.
 
@@ -92,11 +92,11 @@ de probabilidad.<br>
 Una tabla de contingencia es aquella en la que las filas figuran todos los resultados posibles de una de las características de la variable y en columnas todos los resultados posibles de otra característica de la variable, y en cada celda figura los sucesos o eventos conjuntos.<br>
 La tabla de contingencias o probabilidades ofrece una representación clara del número de posibles resultados de la variable pertinente, en especial si hay dos o más sucesos o eventos que se consideran simultáneamente.
 
-![Tablaest](../_src/assets/tablaest.PNG)
+![Tablaest](/_src/M2/assets/tablaest.PNG)
 
 Un diagrama de Venn es una segunda forma de presentar un espacio muestral. Es un diagrama asociado con la teoría de conjuntos de las matemáticas en el cual se describen los eventos que pueden ocurrir en una observación o experimento en particular. Una figura cerrada representa el espacio muestral, mientras que porciones del área, dentro del espacio representan eventos simples o compuestos particulares. En el diagrama se representan gráficamente los eventos como “uniones” o “intersecciones” de círculos. 
 
-![Venn](../_src/assets/Venn.PNG)
+![Venn](/_src/M2/assets/Venn.PNG)
 
 ## Reglas de conteo, combinaciones y permutaciones
 
@@ -106,7 +106,7 @@ A continuación tres reglas de conteo que son muy utilizadas.<br>
 
 La primera regla de conteo sirve para experimentos de pasos múltiples. Considere un experimento que consiste en lanzar dos monedas. Defina los resultados experimentales en términos de las caras y cruces que se observan en las dos monedas. ¿Cuántos resultados experimentales tiene este experimento? El experimento de lanzar dos monedas es un experimento de dos pasos: el paso 1 es lanzar la primera moneda y el paso 2 es lanzar la segunda moneda. Si se emplea H para denotar cara y T para denotar cruz, (H, H) será el resultado experimental en el que se tiene cara en la primera moneda y cara en la segunda moneda. Si continúa con esta notación, el espacio muestral (S) en este experimento del lanzamiento de monedas será el siguiente:
 
-![Resultado Experimento](../_src/assets/resulexp.PNG)
+![Resultado Experimento](/_src/M2/assets/resulexp.PNG)
 
 Por tanto, hay cuatro resultados experimentales. En este caso es fácil enumerar todos los resultados experimentales. La regla de conteo para experimentos de pasos múltiples permite determinar el número de resultados experimentales sin tener que enumerarlos.<br>
 Si considera el experimento del lanzamiento de dos monedas como la sucesión de lanzar primero una moneda y después lanzar la otra, siguiendo la regla de conteo (2)(2) = 4, entonces hay cuatro resultados distintos. El número de resultados experimentales de seis monedas es (2)(2)(2)(2)(2)(2) = 64.
@@ -115,7 +115,7 @@ Si considera el experimento del lanzamiento de dos monedas como la sucesión de 
 
 Otra regla de conteo útil le permite contar el número de resultados experimentales cuando el experimento consiste en seleccionar n objetos de un conjunto (usualmente mayor) de N objetos. Ésta es la regla de conteo para combinaciones:
 
-![Combinaciones](../_src/assets/combi.PNG)
+![Combinaciones](/_src/M2/assets/combi.PNG)
 
 Si no recuerdas el como cálcular un factorial, recuerda repasar los conceptos de funciones dados en el prepcourse.<br>
 Como ejemplo del uso de la regla de conteo para combinaciones, considere un procedimiento de control de calidad en el que un inspector selecciona al azar dos de cinco piezas para probar que no tengan defectos. En un conjunto de cinco partes.<br>
@@ -128,7 +128,7 @@ Si una persona compra un billete de lotería, tiene una en 22.957.480 posibilida
 
 La tercera regla de conteo que suele ser útil, es para permutaciones. Dicha regla permite calcular el número de resultados experimentales cuando se seleccionan n objeto un conjunto de N objetos y el orden de selección es relevante. Los mismos n objetos seleccionados en orden diferente se consideran un resultado experimental diferente.
 
-![Permutaciones](../_src/assets/permu.PNG)
+![Permutaciones](/_src/M2/assets/permu.PNG)
 
 Con el mismo número de objetos, el número de permutaciones que se obtiene en un experimento es mayor que el número de combinaciones, ya que cada selección de n objetos se ordena de n! maneras diferentes.<br>
 Para ver un ejemplo, reconsidere el proceso de control de calidad en el que un inspector selecciona dos de cinco piezas para probar que no tienen defectos. ¿Cuántas permutaciones puede seleccionar?: 5! / (5-2)! = 20.<br>
@@ -163,7 +163,7 @@ No es posible repetir una gran cantidad de veces algunos fenómenos, por ejemplo
   c) Para calcular la probabilidad de que Juan Pérez se case este año, tampoco podemos realizar una gran cantidad de repeticiones del experimento.
 
 Considere, por ejemplo un estudio sobre los tiempos de espera en el departamento de rayos x de un hospital pequeño. Durante 20 días sucesivos un empleado registra el número de personas que están esperando el servicio a las 9:00 a.m.; los resultados son los siguientes:<br>
-![Experimento](../_src/assets/permu.PNG)
+![Experimento](/_src/M2/assets/permu.PNG)
 
 Con el método de la frecuencia relativa, la probabilidad que se le asignará a cada resultado experimental para pacientes esperan el servicio, será:<br>
 - O pacientes --> 2/20 = 0.10
@@ -227,12 +227,12 @@ Utilizando Python cálcular las siguientes probabilidades. Para cada uno intenta
 3. La Agencia Nacional de Seguridad Vial realizó una investigación para saber si los conductores de están usando sus cinturones de seguridad. Los datos muestrales fueron los siguientes:<br>
 Conductores que emplean el cinturón <br>
 
-![Ejercicio](../_src/assets/ejercicio3.PNG)
+![Ejercicio](/_src/M2/assets/ejercicio3.PNG)
 
 - a) ¿Qué metodo cree que se utilizo para asignar probabilidades?.
 - b) Construya un cuadro similar, pero con la asignación de probabilidades.
 - c) ¿Cuál sería el mejor método pára estimar la probabilidad de que en Estados Unidos un conductor lleve puesto el cinturón?.
-- d) Un año antes, la probabilidad en Argentina de que un conductor llevara puesto el cinturón era 0.75. El director de ANSV, se esperaba que la probabilidad llegara a 0.78. ¿Estará satisfecho con los resultados del estudio? (Utilizar tabla adjunta (![Ejercicio](../_src/assets/ejercicio3.PNG))
+- d) Un año antes, la probabilidad en Argentina de que un conductor llevara puesto el cinturón era 0.75. El director de ANSV, se esperaba que la probabilidad llegara a 0.78. ¿Estará satisfecho con los resultados del estudio? (Utilizar tabla adjunta (![Ejercicio](/_src/M2/assets/ejercicio3.PNG))
 - e) ¿Cuál es la probabilidad de que se use el cinturón en las distintas regiones del país? ¿En qué región se usa más el cinturón?(Utilizar misma tabla que el ejercicio anterior).
 
 
@@ -258,7 +258,7 @@ Conductores que emplean el cinturón <br>
 2. La probabilidad de que un Henry repruebe el M1 de 0.8, de que apruebe M2 es 0.5 y de que repruebe el M3 es de 0.4.<br>
  (Los eventos no interfieren entre si) <br>
 
-![Tabla](../_src/assets/probhenry.PNG)
+![Tabla](/_src/M2/assets/probhenry.PNG)
 
 Determinar la probabilidad de que:<br>
  a) Apruebe un módulo.<br>

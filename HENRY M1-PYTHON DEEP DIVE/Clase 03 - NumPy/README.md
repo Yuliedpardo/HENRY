@@ -36,7 +36,7 @@ Un array unidimensional puede ser una fila o una columna de una tabla, igual que
 * 2D: Matriz
 * 3D+: Tensor
 
-![](../_src/assets/03-Numpy/numpy_array.png)
+![](/_src/M1/assets/03-Numpy/numpy_array.png)
 
 ¿Cómo se ve en el código?
 ```python
@@ -215,7 +215,7 @@ El atributo **.dtype** devuelve el tipo de dato de un array.
 int64
 ```
 
-![unaImagenConBoxShadow](../_src/assets/03-Numpy/numpy_array_shape.png)
+![unaImagenConBoxShadow](/_src/M1/assets/03-Numpy/numpy_array_shape.png)
 
 Un método particular es **flatten()**, que permite llevar cualquier array a una dimensión:
 
