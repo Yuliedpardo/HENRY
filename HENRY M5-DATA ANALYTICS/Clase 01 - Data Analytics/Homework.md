@@ -35,7 +35,7 @@ Cantidad total por categoría.<br>
 - d) ¿Que sucede luego del pico de mts recorrido? El vehículo comienza a regresar.
 - e) ¿Cuantos metros recorrio en total? Recorrio 150 mts.
 
-![Ejercicio2](/_src/assets/ejer2.PNG)
+![Ejercicio2](/_src/M5/assets/ejer2.PNG)
 
 4. Se decide presentar el volumen de ventas de 5 productos correspondientes a una distribuidora de alimentos. Los productos van de A = 100 un., B = 95 un., C =90 un., D = 88 un., E = 105 un.
  - a) ¿Que gráfico utilizaría?. Sería conveniente utilizar un gráfico de barras.
@@ -47,4 +47,4 @@ Cantidad total por categoría.<br>
  - b) ¿Que inconveniente presenta a la hora de reconocer patrones? Se dificulta reconocer las magnitudes de las categorías a simple vista.
  - c) ¿Qué otros tipos de gráficos utilizaría? Se podría utilizar un gráfico de barras ordenado por calificación.
  - d) ¿Que tipo de tematicas estarían relacionadas a la variable presentada? Podría relacionarse la satisfacción del cliente en general.
- ![Ejercicio3](/_src/assets/ejer3.PNG)
+ ![Ejercicio3](/_src/M5/assets/ejer3.PNG)

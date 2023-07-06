@@ -102,7 +102,7 @@ Cuando se importan varias tablas, es probable que se realice algún análisis ut
 ### Detección automática durante la carga
 Si consulta dos o más tablas al mismo tiempo, cuando se cargan los datos, Power BI Desktop intenta buscar y crear relaciones por usted. Las opciones de relación Cardinalidad, Dirección de filtro cruzado y Activar esta relación se establecen automáticamente. Power BI Desktop examina los nombres de columna de las tablas que está consultando para determinar si hay relaciones potenciales. Si las hay, esas relaciones se crean automáticamente. Si Power BI Desktop no puede determinar con un alto nivel de confianza que hay una coincidencia, no crea la relación. Sin embargo, aún puede utilizar el cuadro de diálogo Administrar relaciones para crear o editar relaciones manualmente.
 
-![Relaciones](/_src/assets/relaciones.gif)
+![Relaciones](/_src/M5/assets/relaciones.gif)
 
 Es importante destacar que muchas veces, las relaciones creadas por Power BI, no suelen ser las esperadas. Por eso es muy importante observar el modelo final y realizar las correcciones necesarias.
 
@@ -113,7 +113,7 @@ En el cuadro de diálogo Crear relación, en la lista desplegable primera tabla,
 
 En la segunda lista desplegable de tablas, seleccione la otra tabla que desee en la relación. Seleccione la otra columna que desea usar y, a continuación, seleccione Aceptar.
 
-![Relaciones 2](/_src/assets/relaciones2.gif)
+![Relaciones 2](/_src/M5/assets/relaciones2.gif)
 
 #### Cardinalidad
 La opción Cardinalidad puede tener una de las siguientes configuraciones:
@@ -145,7 +145,7 @@ Las rutas de relación son deterministas, lo que significa que los filtros siemp
 
 Las relaciones de modelo no imponen la integridad de los datos. Para obtener más información, vea el tema Evaluación de relaciones más adelante en este artículo, que explica cómo se comportan las relaciones de modelo cuando hay problemas de integridad de datos con los datos.
 
-![Modelos](/_src/assets/filtro.gif)
+![Modelos](/_src/M5/assets/filtro.gif)
 
 #### Este tema te ayudará a genera mejores modelos análiticos en Power BI, por eso es importante que profundizes con la documentación oficial:
 

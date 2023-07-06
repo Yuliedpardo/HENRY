@@ -32,7 +32,7 @@ Conjunto de técnicas y procesos **cuantitativos** y **cualitativos** que son us
 
 # Evolución Proceso Analitico
 
-![Proceso](/_src/assets/proceso_analitico.png)
+![Proceso](/_src/M5/assets/proceso_analitico.png)
 ## Tipos de Analisis:
 
 - Descriptivo: Describe patrones claves en los datos existentes y permite observar situaciones y comportamientos habituales.
@@ -63,7 +63,7 @@ A la hora de comenzar a analizar nuestros se debe recorrer un camino que suele s
 5. En base a los insigths, mejorar mi modelo de negocio, tomando acciones:  realizar acciones de mktg en ese mercado no explotado, para mejorar el rendimiento global...
 
 
-![Journey](/_src/assets/data_analytics_joruney.png)
+![Journey](/_src/M5/assets/data_analytics_joruney.png)
 
 ## Visualización de Datos
 
@@ -75,7 +75,7 @@ Nuestros ojos son atraídos por los colores y patrones. Nuestra cultura es visua
 
 La visualización de datos es otra forma de arte visual que capta nuestro interés y mantiene nuestros ojos en el mensaje. Cuando vemos un gráfico, vemos rápidamente las tendencias y los valores atípicos. Si podemos ver algo, lo interiorizamos rápidamente. Es contar historias con un propósito. Si alguna vez haz visto una gigantesca hoja de cálculo de datos y no te fue posible ver una tendencia, sabes cuán eficaz puede ser una visualización.
 
-![Visual](/_src/assets/visual.PNG)
+![Visual](/_src/M5/assets/visual.PNG)
 
 
 [¿Qué es la visualización de datos?](https://www.tableau.com/es-mx/learn/articles/data-visualization)
@@ -91,25 +91,25 @@ Cada elemento en lo visual debe ser visto (percepción) dentro de aproximadament
 
 ¿Cuantos 5 puedes contar aquí?
 
-![Prueba](/_src/assets/prueba1.PNG)
+![Prueba](/_src/M5/assets/prueba1.PNG)
 
 
 ¿En esta imagen?
 
-![Prueba](/_src/assets/prueba2.PNG)
+![Prueba](/_src/M5/assets/prueba2.PNG)
 
 ¿Ha aumentado o disminuido el Volumen Bruto de Mercaderías en los últimos cinco años? Y... ¿Qué categoría ha crecido más rápido?
 
-![Volumen](/_src/assets/ej1.PNG)
+![Volumen](/_src/M5/assets/ej1.PNG)
 
 Quizás con este gráfico resulte más sencillo determinarlo.
 
-![Volumen](/_src/assets/ej2.PNG)
+![Volumen](/_src/M5/assets/ej2.PNG)
 
 Hacer uso de VSTM requiere que sepamos qué funciona y qué no cuando ocurre el procesamiento visual. Los atributos que funcionan bien con VSTM se denominan características visuales predispectas.<br>
 Por ejemplo, cuando los datos se representan de forma visual, podemos detectar rápidamente comportamientos que podrían pasar desapercibidos si los vemos estadísticamente. Tiene sentido que la visualización de datos nos dé más significado, ya que el 90% de la información transmitida al cerebro humano es visual. También procesamos imágenes visuales 60.000 veces más rápido que el texto, ya que al cerebro le resulta más fácil recordarlas y analizarlas.<br>
 
-![Brain](/_src/assets/brain.PNG)
+![Brain](/_src/M5/assets/brain.PNG)
 
 
 Hay diversos estudios psicológicos que demuestran que si tenemos delante una tarea cognitiva exigente y una tentación, es más probable que caigamos en la tentación. 
@@ -155,7 +155,7 @@ Como desarrolladores y diseñadores, tenemos mucho control sobre lo que nuestros
 ¿Cómo le damos sentido a lo que vemos?<br>
 Hay varias categorías de procesamiento pre-atento; exploremos algunos:
 
-![Patrones](/_src/assets/patrones.PNG)
+![Patrones](/_src/M5/assets/patrones.PNG)
 
 Los patrones visuales o (jerarquías visuales) nos permiten saber qué datos involucran primero a nuestros usuarios y con qué visualizaciones interactúan (y en qué orden) mientras están en el tablero. Al establecer una jerarquía visual, nos aseguramos de que la comunicación entre nuestros usuarios y los paneles sea fluida teniendo en cuenta las siguientes técnicas:
 
@@ -172,7 +172,7 @@ Este tipo de patrón es un concepto de diseño que considera que los usuarios ti
 - luego dibuja sus ojos en diagonal hacia la parte inferior izquierda.
 - y por último, hacer un último movimiento horizontal hacia la parte inferior derecha.
 
-![Patrones Z](/_src/assets/z.PNG)
+![Patrones Z](/_src/M5/assets/z.PNG)
 
 ### Elección de gráficos
 
@@ -188,7 +188,7 @@ De estos cuatro tipos, lo más probable en la mayoría de casos es que principal
 
 Como puedes ver la mayoría de los casos se pueden solucionar con unos pocos tipos de gráficos básicos, aunque pueden aplicarse múltiples variantes para cada caso concreto. Podemos decir que los gráficos más usados son los de barras y líneas en todas sus variantes (horizontal o vertical, simple o apiladas, etc.). Cuando se requiere un gran detalle se suele recurrir a la tabla de datos.
 
-![Graficos](/_src/assets/graficos.png)
+![Graficos](/_src/M5/assets/graficos.png)
 
 ## Herramientas de visualización
 
@@ -251,7 +251,7 @@ En la cinta Inicio, seleccione Obtener datos > Más.
 
 Aparece la ventana Obtener datos, que muestra muchas categorías a las que Power BI Desktop puede conectarse.
 
-![Conexión a fuentes](/_src/assets/conetar.png)
+![Conexión a fuentes](/_src/M5/assets/conetar.png)
 
 
 ![Vista Power BI](https://docs.microsoft.com/es-es/power-bi/fundamentals/media/desktop-what-is-desktop/what-is-desktop-07.png)
@@ -319,7 +319,7 @@ Cantidad total por categoría.<br>
 - d) ¿Que sucede luego del pico de mts recorrido?
 - e) ¿Cuantos metros recorrio en total?
 
-![Ejercicio2](/_src/assets/ejer2.PNG)
+![Ejercicio2](/_src/M5/assets/ejer2.PNG)
 
 4. Se decide presentar el volumen de ventas de 5 productos correspondientes a una distribuidora de alimentos. Los productos van de A = 100 un., B = 95 un., C =90 un., D = 88 un., E = 105 un.
  - a) ¿Que gráfico utilizaría?.
@@ -332,7 +332,7 @@ Cantidad total por categoría.<br>
  - c) ¿Qué otros tipos de gráficos utilizaría?
  - d) ¿Que tipo de tematicas estarían relacionadas a la variable presentada?
 
- ![Ejercicio3](/_src/assets/ejer3.PNG)
+ ![Ejercicio3](/_src/M5/assets/ejer3.PNG)
 
 6. Debes instalar Power BI Desktop y seguir las instrucciones del siguiente link para realizar tu primer conexión de datos:
 
