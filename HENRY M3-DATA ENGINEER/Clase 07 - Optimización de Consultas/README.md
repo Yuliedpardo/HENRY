@@ -28,7 +28,7 @@ Por lo general LEFT(Nombre) = 'Rod' es menos performante que LIKE 'Rod%' (profun
 La ficha Resultados del editor SQL posee Estadísticas de consulta que utiliza datos del esquema de rendimiento para recopilar métricas clave para la consulta ejecutada, como la sincronización, las tablas temporales, los índices, las combinaciones y mucho más.
 Las estadísticas en MySQL se pueden consultar en el margen derecho de la pantalla de resultados, mediante la opción "Query Stats".
 
-![Query](../_src/assets/query.PNG)
+![Query](/_src/M3/assets/query.PNG)
 
 #### Plan de explicación visual
 
@@ -71,17 +71,17 @@ Los índices de las tablas ayudan a indexar el contenido de diversas columnas pa
 De ahí que la creación de índices optimiza el rendiemiento de las consultas y a su vez el de la BBDD, pueden agregarse índices en caso de tablas puentes donde no se ha solucionado el problema de indexación aplicado claves concatenadas.<br>
 En MySQL puede utilizarse CREATE INDEX para crear o añadir índices en las tablas de una base de datos.<br>
 
-![IndicesTabla](../_src/assets/indextable.PNG)
+![IndicesTabla](/_src/M3/assets/indextable.PNG)
 
 Con el código superior CREATE INDEX estaríamos creando uno o varios índices ordinarios en una tabla existente.
 
-![IndicesTabla](../_src/assets/indexejemplo.PNG)
+![IndicesTabla](/_src/M3/assets/indexejemplo.PNG)
 
 Cuando hacemos una consulta sobre un campo sin índices, el motor busca la condición de forma exhaustiva registro a registro para quedarse con aquellos que la cumplan. Sí por el contrario, contamos con una tabla de índices, esa busqueda se de forma más óptima, ya que se tienen conocimiento de la ubicación de cada registro.
 
-![Indicespp](../_src/assets/indexpp.PNG)
+![Indicespp](/_src/M3/assets/indexpp.PNG)
 
-![Indicespp](../_src/assets/indexpp2.PNG)
+![Indicespp](/_src/M3/assets/indexpp2.PNG)
 
 
 Podemos tener los siguientes tipos de índices en una tabla de MySQL:
@@ -94,7 +94,7 @@ Podemos tener los siguientes tipos de índices en una tabla de MySQL:
 
 También se puedne eliminar índices mediante la sentencia DROP INDEX, siempre teniendo presente que la utlización de la sentencia DROP puede llevar a consucuencias indeseadas.
 
-![Indicespp](../_src/assets/DROPINDEX.PNG)
+![Indicespp](/_src/M3/assets/DROPINDEX.PNG)
 
 
 En conclusión, es una buena práctica indexar nuestras tablas, tanto mediante PK como de otros tipos de indices. Cuando la utilización de PK no resulte aplicable siempre se debe recurrir a otra alternativa de indexación.
@@ -118,9 +118,9 @@ FROM instructores
 WHERE idInstructor = 1 OR idInstructor = 2 OR idInstructor = 3
 OR idInstructor = 4 OR idInstructor = 5
 ```
-![IN](../_src/assets/IN.PNG)
+![IN](/_src/M3/assets/IN.PNG)
 
-![OR](../_src/assets/OR.PNG)
+![OR](/_src/M3/assets/OR.PNG)
 
 ### Formas Normales
 
@@ -132,11 +132,11 @@ Una relación se encuentra en 1FN sólo si cada uno de sus atributos contiene un
 Supongamos que guardamos las sucursales donde compraron los clientes considerando el diseño de la imagen.<br>
 Podemos observar, que en el mismo registro se guardan todas las sucursales asociadas al cliente, motivo por el cual no se cumple la 1FN.
 
-![FN1](../_src/assets/FN1.PNG)
+![FN1](/_src/M3/assets/FN1.PNG)
 
 Para corregirlo, se crean dos tablas, donde vamos a poder ver que cada registro guarda un solo valor. De esta manera, el esquema cumple la 1FN.
 
-![FN12](../_src/assets/FN12.PNG)
+![FN12](/_src/M3/assets/FN12.PNG)
 
 #### Segunda Forma Normal (2FN)
 
@@ -148,11 +148,11 @@ La clave de esta tabla, está formada por los campos Codigo_Cliente y Codigo_Suc
 - Ventas depende de la clave completa Codigo_Cliente + Codigo_Sucursal.<br>
 Por lo que ocurre en 1 y 2 no se cumple con la 2FN.
 
-![FN2](../_src/assets/FN2.PNG)
+![FN2](/_src/M3/assets/FN2.PNG)
 
 Para corregirlo, debemos llegar a un esquema de 3 tablas como el que se puede observar. De esta manera sí se cumple la 2FN para el esquema.
 
-![FN21](../_src/assets/FN21.PNG)
+![FN21](/_src/M3/assets/FN21.PNG)
 
 #### Tercera Forma Normal (3FN)
 
@@ -164,11 +164,11 @@ Como se puede observar, surgen las siguientes dependencias:
 - Codigo_Cliente Provincia.<br>
 Aunque cumple con la 2FN, la Provincia está tambien ligada a la Localidad, con lo que no se cumple la 3FN.
 
-![FN3](../_src/assets/FN3.PNG)
+![FN3](/_src/M3/assets/FN3.PNG)
 
 Para corregirlo, debemos llegar a un esquema de 2 tablas como el que se puede observar. De esta manera se cumple la 3FN para el esquema.
 
-![FN31](../_src/assets/FN31.PNG)
+![FN31](/_src/M3/assets/FN31.PNG)
 
 #### Cuarta Forma Normal (4FN)
 
@@ -176,11 +176,11 @@ Una relación se encuentra en 4FN sólo si se cumple 3FN y no posee dependencias
 Supongamos que tenemos un esquema como el de la imagen, donde guardamos que una sucursal vende un determinado producto mediante un canal de venta.<br>
 Notemos que debido a que la tabla tiene una clave única y ningún atributo no clave, no viola ninguna forma normal hasta la 3FN. Pero debido a que los canales de venta de una sucursal son independientes de los productos que vende, hay redundancia en la tabla: por ejemplo vemos tres veces que Caballito vende OnLine. Esto se describe como que Canal de Venta está teniendo una dependencia multivalor en Sucursal e impide que se cumpla con la 4FN en la relación.<br>
 
-![FN4](../_src/assets/FN4.PNG)
+![FN4](/_src/M3/assets/FN4.PNG)
 
 Para corregirlo, debemos poner los hechos sobre los Canales de Ventas por los que se vende en una tabla diferente a los hechos sobre los productos que se vende. De esta manera se cumple la 4FN para el esquema.
 
-![FN41](../_src/assets/FN41.PNG)
+![FN41](/_src/M3/assets/FN41.PNG)
 
 #### Quinta Forma Normal (5FN)
 
@@ -188,11 +188,11 @@ Una relación se encuentra en 5FN sólo si se cumple 4FN y cada dependencia de u
 Siguiendo con el ejemplo anterior, la relación también será válida para la 5FN si existe una regla en el escenario real que limite una relación de una Canal de Venta con un Producto al no ser vendido ese Producto por la Sucursal.<br>
 El hecho de que no haya forma de limitar las combinaciones inválidas del mundo real, limita el cumplimiento de la 5FN.<br>
 
-![FN5](../_src/assets/FN5.PNG)
+![FN5](/_src/M3/assets/FN5.PNG)
 
 Para corregirlo, además de poner en tablas diferentes, la relaciones posibles Sucursal-Canal de Venta y Sucursal-Producto, debemos hacer lo propio con la relación Canal de Venta-Producto. De esta manera se cumple la 5FN para el esquema.<br>
 
-![FN51](../_src/assets/FN51.PNG)
+![FN51](/_src/M3/assets/FN51.PNG)
 
 ### Modelos de Datos
 
@@ -201,7 +201,7 @@ Los modelos de datos buscan representar un realidad que es posible representar m
 - Tablas de Hechos: Registran las operaciones ocurridas, todo tipo de transacciones donde intervienen las diferentes entidades del modelo. Por lo general están confeccionadas por campos que refieren a un momento en el tiempo, campos que refieren a las entidades correspondientes y campos donde se guardan valores numéricos, que luego, pasan a ser métricas. Un ejemplo pueden ser las tablas de ventas, donde queda reflejado día y hora de la transacción, cliente, producto, sucursal como entidades, representadas por claves foráneas, y por último, los valores de precio y cantidad de unidades vendidas.<br>
 - Tablas Maestros: Registran los atributos particulares de las entidades, representando cada registro a una única instancia, por medio de una clave primaria. Un ejemplo puede ser la tabla de maestro de clientes, donde cada registro posee un identificador único y representa los datos respectivos de un único cliente.<br>
 
-![TE](../_src/assets/TE.PNG)
+![TE](/_src/M3/assets/TE.PNG)
 
 #### Modelos de Estrella
 
@@ -210,7 +210,7 @@ La nomenclatura típica, es anteponer “Fact_” a las tablas de hechos, y “D
 
 Por su forma de trabajar filtrando la información en base a selecciones, en las herramientas de BI no se utilizan referencias circulares, ya que, al filtrar por una dimensión, el filtro se aplica en cascada sobre la tabla de hechos y las dimensiones asociadas a esos registros.
 
-![ESTRELLA](../_src/assets/ESTRELLA.PNG)
+![ESTRELLA](/_src/M3/assets/ESTRELLA.PNG)
 
 #### Modelos de Copo de Nieve
 
@@ -219,9 +219,9 @@ Las tablas de un esquema de copo de nieve generalmente se normalizan en la terce
 
 En la siguiente figura se muestra un esquema de copo de nieve con dos dimensiones, cada una con tres niveles. Un esquema de copo de nieve puede tener varias dimensiones y cada dimensión puede tener varios niveles.<br>
 
-![COPO](../_src/assets/COPO.PNG)
+![COPO](/_src/M3/assets/COPO.PNG)
 
-![COPO2](../_src/assets/COPO2.PNG)
+![COPO2](/_src/M3/assets/COPO2.PNG)
 
 - La tabla de dimensiones de Empleado contiene los atributos: EmployeeID, EmployeeName, DepartmentID, Region, Territory.<br>
 - El atributo DepartmentID se vincula con la tabla Empleado con la tabla de dimensiones Departamento.

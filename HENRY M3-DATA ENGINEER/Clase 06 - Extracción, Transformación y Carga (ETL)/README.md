@@ -38,9 +38,9 @@ La fase de transformación de un proceso ETL aplica una serie de reglas de negoc
 Un elemento fundamental a descubrir dentro de las tareas de identificación del ruido son los valores atípicos o outliers.
 Los Outliers son elementos que por su comportamiento se apartan notoriamente del comportamiento general. Esto se puede deber a un error en los datos o a un dato correcto que representa anomalías en la realidad.
 
-<img src="../_src/assets/outliers1.jpg"  width="550">
-<img src="../_src/assets/outliers2.jpg"  width="550">
-<img src="../_src/assets/outliers3.jpg"  width="550">
+<img src="/_src/M3/assets/outliers1.jpg"  width="550">
+<img src="/_src/M3/assets/outliers2.jpg"  width="550">
+<img src="/_src/M3/assets/outliers3.jpg"  width="550">
 
 ### Diagrama de Caja
 
@@ -50,7 +50,7 @@ Rango intercuartílico o IQR:
 * mínimo = Q1 - 1.5 x IQR
 * máximo = Q3 + 1.5 x IQR
 
-<img src="../_src/assets/diagrama_caja.jpg"  width="250">
+<img src="/_src/M3/assets/diagrama_caja.jpg"  width="250">
 
 ### Regla de las tres sigmas
 
@@ -59,10 +59,10 @@ La Regla de las Tres Sigmas se basa en el valor promedio y la desviación están
 * mínimo = Promedio – 3 * Desviación Estándar
 * máximo = Promedio + 3 * Desviación Estándar
 
-<img src="../_src/assets/tres_sigmas.jpg"  width="250">
+<img src="/_src/M3/assets/tres_sigmas.jpg"  width="250">
 
 ### Consideraciones
 
 A veces, es la variable la que nos lo indica. Por ejemplo, la asistencia a un curso no puede ser menor que cero o mayor al número de alumnos que tiene el curso.
 
-<img src="../_src/assets/outliers_tope.jpg"  width="400">
+<img src="/_src/M3/assets/outliers_tope.jpg"  width="400">

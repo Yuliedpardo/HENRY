@@ -85,7 +85,7 @@ WHERE fechaIngreso = (  SELECT MIN(fechaIngreso) AS fecha
 SELECT *
 FROM primerosAlumnos
 
--- Modificar una vista.
+-- Modificar una vista
 ALTER VIEW primerosAlumnos AS
 SELECT idAlumno, CONCAT(apellido," ",nombre), fechaIngreso
 FROM alumnos
@@ -98,7 +98,7 @@ DROP VIEW primerosAlumnos
 ```
 Al crear una vista, esta queda alojada en la base de datos correspondiente y se pueden ver en la iterfaz del gestor de base de datos.
 
-<img src="../_src/assets/vista.PNG"  height="100">
+<img src="/_src/M3/assets/vista.PNG"  height="100">
 
 Una vista actúa como filtro de las tablas subyacentes a las que se hace referencia en ella. La consulta que define la vista puede provenir de una o de varias tablas, o bien de otras vistas de la base de datos actual u otras bases de datos. Asimismo, es posible utilizar las consultas distribuidas para definir vistas que utilicen datos de orígenes heterogéneos. Esto puede resultar de utilidad, por ejemplo, si desea combinar datos de estructura similar que proceden de distintos servidores, cada uno de los cuales almacena los datos para una región distinta de la organización.
 
@@ -147,7 +147,7 @@ SELECT 	v.Fecha,
 		AVG(v.Precio * v.Cantidad) OVER (PARTITION BY v.Fecha) AS Promedio_Ventas
 FROM venta v;
 ```
-<img src="../_src/assets/Ventana_01.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_01.png"  weight="250">
 
 La función ventana se puede descomponer en las siguientes partes:
 
@@ -181,7 +181,7 @@ SELECT 	v.Fecha,
 		SUM(v.Precio * v.Cantidad) OVER (PARTITION BY v.Fecha ORDER BY v.IdVenta) AS Total_Ventas
 FROM venta v;
 ```
-<img src="../_src/assets/Ventana_02.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_02.png"  weight="250">
 
 Se requiere visualizar por fechas, el ranking de las ventas ordenadas de mayor a menor, notemos el uso de las clausulas PARTITION BY y ORDER BY con el agregado de DESC, para las ventas mayores sean las que tengan mejor ranking.
 
@@ -194,11 +194,11 @@ SELECT RANK() OVER (PARTITION BY v.Fecha ORDER BY v.Precio * v.Cantidad DESC) AS
         (v.Precio * Cantidad) as Venta
 FROM venta v;
 ```
-<img src="../_src/assets/Ventana_03.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_03.png"  weight="250">
 
 La función RANK() tiene la particularidad de que utiliza un salto o gap entre los registros, notar lo que pasa en la consulta anterior, con el puesto 4 del ranking. El cuarto aparece dos veces, debido a que son ventas con el mismo valor, y luego el siguiente valor de ranking es el 4. Con el mismo 4 y con el 7, vuelve a pasar lo mismo:
 
-<img src="../_src/assets/Ventana_04.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_04.png"  weight="250">
 
 Quizas querramos ver esto de otra manera, para lo cual, deberíamos usar la función DENSE_RANK():
 
@@ -211,7 +211,7 @@ SELECT DENSE_RANK() OVER (PARTITION BY v.Fecha ORDER BY v.Precio * v.Cantidad DE
         (v.Precio * Cantidad) as Venta
 FROM venta v;
 ```
-<img src="../_src/assets/Ventana_05.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_05.png"  weight="250">
 
 Qué pasa si ahora, se quieren mostrar solamente las 3 ventas más altas por cada fecha. Para esto, sí vamos a acudir a una subconsulta, ya que no es posible utilizar la clásula WHERE con las funciones ventana, debido a que la función ventana, ejecuta en el último paso, justo antes del ORDER BY, esto es parte de lo que le da su buena performance.
 
@@ -226,7 +226,7 @@ FROM (	SELECT DENSE_RANK() OVER (PARTITION BY v.Fecha ORDER BY v.Precio * v.Cant
 	FROM venta v) ventas
 WHERE Ranking_Venta < 4;
 ```
-<img src="../_src/assets/Ventana_06.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_06.png"  weight="250">
 
 Al listado anterior, agregamos el requerimiento de que sea para la sucursal con id = 12 y además que se muestre el porcentaje acumulado, haciendo uso de la función PERCENT_RANK():
 
@@ -243,7 +243,7 @@ WHERE Ranking_Venta < 4;
 ```
 Tener en cuenta que PERCENT_RANK = (ranking - 1) / (cantidad filas - 1)
 
-<img src="../_src/assets/Ventana_09.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_09.png"  weight="250">
 
 
 Se requiere ver el listado de clientes numerado, particionando por Localidad. Para esto, es posible hacer uso de la función ROW_NUMBER()
@@ -256,7 +256,7 @@ SELECT ROW_NUMBER() OVER(PARTITION BY c.IdLocalidad) AS row_id,
         c.IdLocalidad
 FROM cliente c;
 ```
-<img src="../_src/assets/Ventana_07.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_07.png"  weight="250">
 
 Areguemos ahora, el primer y el último nombre de los clientes, haciendo uso de las funciones FIST_VALUE(<campo>) y LAST_VALUE(<campo>):
 
@@ -270,7 +270,7 @@ SELECT ROW_NUMBER() OVER(PARTITION BY c.IdLocalidad) AS row_id,
         c.IdLocalidad
 FROM cliente c;
 ```
-<img src="../_src/assets/Ventana_08.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_08.png"  weight="250">
 
 A la consulta anterior, agregamos la necesidad de ver el enésimo nombre de los clientes, haciendo uso de la función NTH_VALUE(<campo>, <posición>):
 
@@ -285,7 +285,7 @@ SELECT ROW_NUMBER() OVER(PARTITION BY c.IdLocalidad) AS row_id,
         c.IdLocalidad
 FROM cliente c;
 ```
-<img src="../_src/assets/Ventana_09.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_09.png"  weight="250">
 
 Se requiere ver un listado con el detalle de las ventas para cada cliente, que contenga la cantidad de días transcurridos entre operación y operación de venta, para lo cual, es útil la función LEAD(<campo>) que trae el valor que contiene ese campo en el registro anterior, según la partición y el orden que se le de. La función LAG(<campo>) obtiene el valor que contiene el registro siguiente:
 
@@ -299,7 +299,7 @@ SELECT	ROW_NUMBER() OVER(PARTITION BY v.IdCliente ORDER BY v.Fecha) AS operacion
         (v.Precio * v.Cantidad) AS Venta
 FROM venta v;
 ```
-<img src="../_src/assets/Ventana_10.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_10.png"  weight="250">
 
 Con el listado anterior, ahora es necesario obtener el promedio de días que transcurren, por cliente, entre operación y operación de venta:
 
@@ -312,7 +312,7 @@ FROM (
 	FROM venta v) vta
 GROUP BY IdCliente;
 ```
-<img src="../_src/assets/Ventana_11.png"  weight="250">
+<img src="/_src/M3/assets/Ventana_11.png"  weight="250">
 
 Tambien, es posible definir las ventanas con un alias:
 

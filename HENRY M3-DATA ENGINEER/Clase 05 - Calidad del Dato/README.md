@@ -37,14 +37,14 @@
 * Los datos deben estar actualizados. Debe existirreferencias de la fecha de confección o de la fecha de última actualización.
 * Por ejemplo: Información de deuda sin una referencia en cuanto a la fecha de actualización.
 
-<img src="../_src/assets/actualizacion.jpg"  height="250">
+<img src="/_src/M3/assets/actualizacion.jpg"  height="250">
 
 ### Completitud
 
 * Los datos deben estar completos. Puede parecer obvio pero es una de las situaciones más habituales.
 * Por Ejemplo: tablas con datos filiatorios y de contacto con campos vacíos aleatoriamente.
 
-<img src="../_src/assets/completitud.jpg"  height="250">
+<img src="/_src/M3/assets/completitud.jpg"  height="250">
 
 ### Fiabilidad
 
@@ -52,7 +52,7 @@
 * Si trabajamos con una tabla de la que no conocemos su procedencia o bien que bajamos de una pagina poco confiable, los datos no serán fiables y nos pueden llevar a análisis erróneos.
 * De igual manera, si no podemos reconstruir el camino completo del dato desde su captura hasta la actualidad, el conjunto de datos no tiene trazabilidad.
 
-<img src="../_src/assets/fiabilidad.jpg"  height="250">
+<img src="/_src/M3/assets/fiabilidad.jpg"  height="250">
 
 ### Accesibilidad
 
@@ -61,7 +61,7 @@
 * Ejemplo: Una tabla con nombres de campos numerados: Campo1, Campo2, etc…
 * Ejemplo 2: Un reporte que se aloja en una ubicación poco habitual.
 
-<img src="../_src/assets/accesibilidad.jpg"  height="250">
+<img src="/_src/M3/assets/accesibilidad.jpg"  height="250">
 
 ### Consistencia
 
@@ -69,7 +69,7 @@
 * Externa: Calidad de interdependencia y racionalidad de los campos.
 * Ejemplo: Las claves primarias y las claves foráneas deben ser consistentes y permitir la relación entre tablas.
 
-<img src="../_src/assets/consistencia.jpg"  height="250">
+<img src="/_src/M3/assets/consistencia.jpg"  height="250">
 
 ### Hechos y Dimensiones
 
@@ -77,7 +77,7 @@ Son tablas dimensionales o maestros, aquellas que contienen información respect
 Son tablas de hechos aquellas que guardan eventos donde se relacionan las entidades incluidas en el modelo y tambien las métricas asociadas. Por ejemplo una tabla de vetnas, donde se guarda la fecha de la venta, cliente y producto implicados, la sucursal actuante y el monto de la venta realizada. Existe un registro por evento, al cuál se asocian las entidades relacionadas y también una métrica. Consecuentemente, una tabla de hechos puede tambíen reflejar una entidad en sí misma, como el caso de la venta ó una generación de factura.
 Concluyendo entonces que ambos, hechos y dimensiones, son también entidades.
 
-<img src="../_src/assets/hechos_dimensiones.jpg"  height="250">
+<img src="/_src/M3/assets/hechos_dimensiones.jpg"  height="250">
 
 ## Preparación de los Datos
 
@@ -101,44 +101,44 @@ Las técnicas de preparación son obligatorias para la incorporación de nuevos 
 
 Es el primer paso e implica integrar datos de diferentes fuentes e incorporar los datos a formatos tabulares si no lo estuvieran.
 
-<img src="../_src/assets/integracion.jpg"  height="250">
+<img src="/_src/M3/assets/integracion.jpg"  height="250">
 
 ### Limpieza de Datos
 
 Proceso por el cual se discriminan los datos importantes de los accesorios y a la vez los veraces de los erróneos. Luego se procede a desestimar o borrar aquellos datos que no serán utilizados y a validar los que se conservarán.
 
-<img src="../_src/assets/limpieza.jpg"  height="250">
+<img src="/_src/M3/assets/limpieza.jpg"  height="250">
 
 ### Normalización de Datos
 
 En este paso se identifican aquellos valores iguales con notaciones diferentes y se los reescribe de una manera uniforme.
 Ejemplo: Calle S Martín, Calle Gral. San Martín, Calle José de San Martín…. = Calle Gral. José de San Martín.
 
-<img src="../_src/assets/normalizacion.jpg"  height="250">
+<img src="/_src/M3/assets/normalizacion.jpg"  height="250">
 
 ### Imputación de Valores Faltantes
 
 La imputación de valores faltantes esta relacionada con la identificación de los casos en donde exista perdida o ausencia de datos. En estos casos será importante realizar acciones de reconstrucción, aunque no siempre es posible resolverlas.
 
-<img src="../_src/assets/valores_faltantes.jpg"  height="250">
+<img src="/_src/M3/assets/valores_faltantes.jpg"  height="250">
 
 ### Transformación de Datos
 
 Este es el momento en que la información nueva será convertida a un formato compatible con base de datos. En este punto es crítico reducir el efecto distorsivo de la transformación.
 
-<img src="../_src/assets/transformacion.jpg"  height="250">
+<img src="/_src/M3/assets/transformacion.jpg"  height="250">
 
 ### Modelado de Datos
 
 Se establecen las relaciones entre los datos, se determinan que entidades contienen datos maestros y cuáles contienen hechos, dando lugar a las dimensiones y las métricas.
 
-<img src="../_src/assets/modelado.jpg"  height="250">
+<img src="/_src/M3/assets/modelado.jpg"  height="250">
 
 ### Reportes y Visualización
 
 Se genera Información a partir de los datos, esa información queda disponible para su análisis, que da lugar al Conocimiento.
 
-<img src="../_src/assets/reportes.jpg"  height="250">
+<img src="/_src/M3/assets/reportes.jpg"  height="250">
 
 ### Claves subrogadas
 

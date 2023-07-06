@@ -7,25 +7,25 @@
 
 ## Convertir los Datos en Conocimiento
 
-<img src="../_src/assets/datos_info_conoc.jpg"  height="250">
+<img src="/_src/M3/assets/datos_info_conoc.jpg"  height="250">
 
 ### Datos
 
 Los Datos son un conjunto de hechos almacenados:
 
-<img src="../_src/assets/datos.jpg"  height="250">
+<img src="/_src/M3/assets/datos.jpg"  height="250">
 
 ### Información
 
 Es el conjunto de datos procesados en tiempo y en forma, que constituyen un mensaje relevante y reduce la incertidumbre.
 
-<img src="../_src/assets/informacion.jpg"  height="250">
+<img src="/_src/M3/assets/informacion.jpg"  height="250">
 
 ### Conocimiento
 
 Se adquiere con la práctica y la experiencia. Dota a las personas con la capacidad de tomar decisiones. 
 
-<img src="../_src/assets/conocimiento.jpg"  height="250">
+<img src="/_src/M3/assets/conocimiento.jpg"  height="250">
 
 ## Inteligencia de Negocios (BI)
 
@@ -45,11 +45,11 @@ Se adquiere con la práctica y la experiencia. Dota a las personas con la capaci
 * La Inteligencia de Negocios, enfocada en la calidad del dato, procura procesarlo, desde su origen para su análisis
 * Soporte a la toma de decisiones
 
-<img src="../_src/assets/decision.jpg"  height="250">
+<img src="/_src/M3/assets/decision.jpg"  height="250">
 
 ## Ecosistema típico en una organización
 
-<img src="../_src/assets/ecosistema.jpg"  height="400"><br>
+<img src="/_src/M3/assets/ecosistema.jpg"  height="400"><br>
 
 En una organización, normalmente se trabaja con diversos sistemas transaccionales, es decir, sistemas que se utilizan para la operatoria diaria, que son el punto de ingreso de los datos, a través de clientes, operadores, administrativos, usuarios en general, pero también se generan datos a partir de dispositivos de medición, como sensores o mecanismos de log, por ejemplo un servidor web dedicado a un portal de venta de productos, que en cada click deja un log con los datos del producto y usuario que lo visitó. Esto trae en consecuencia que en una primera instancia los datos no están en un único repositorio, ni tienen necesariamente una estructura apta para ser almacenados en una base de datos relacional (RDBMS), Por tanto, al momento de querer extraer datos para su   posterior análisis, nos encontramos con el problema de que debemos acceder a varias fuentes, unificarlo en un repositorio común, y luego realizar las consultas requeridas.
 

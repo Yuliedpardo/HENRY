@@ -50,7 +50,7 @@ El scrapping de registros, toma una instantánea de los registros de la base de 
 
 En las cargas de datos pueden darse dinstintas alternativas de conservación, en donde depende de las decisiones del equipo como va operar cada cambio al ser capturado.
 
-![Carga](../_src/assets/carga.jpg)
+![Carga](/_src/M3/assets/carga.jpg)
 
 ## Data Profiling
 
@@ -65,7 +65,7 @@ La creación de perfiles de datos puede eliminar errores costosos que son comune
 La tabla de auditoría es una dimensión especial que se ensambla en el sistema ETL para cada tabla de hechos. La dimensión de auditoría contiene el contexto de metadatos en el momento en que se crea una fila específica de la tabla de hechos. Se podría decir se elevan metadatos a datos reales! Para visualizar cómo se crean las filas de dimensión de auditoría, imagine esta tabla de hechos de envíos se actualiza una vez al día a partir de un archivo por lotes. Supongamos que hoy Tiene una carga perfecta sin errores marcados. En este caso, generaría solo una fila de dimensión de auditoría, y se adjuntaría a cada fila de hechos cargada hoy.<br>
 Todas las categorías, puntuaciones y números de versión serían los mismos.
 
-![Auditoria](../_src/assets/auditoria.PNG)
+![Auditoria](/_src/M3/assets/auditoria.PNG)
 
 
 ### Tabla de errores<br>
@@ -74,7 +74,7 @@ aplicaciones genéricas de integración de datos (DI) donde los datos se transfi
 La tabla principal es la tabla de hechos de eventos de error. Sus registros se componen de cada error arrojado (producido) por una pantalla en cualquier parte del sistema ETL. Así cada error de pantalla produce exactamente una fila en esta tabla, y cada fila en la tabla corresponde a un error observado.<br>
 La tabla de hechos de eventos de error también tiene una clave principal de una sola columna, que se muestra como la clave de evento de error. Esta clave sustituta, como las claves primarias de la tabla de dimensiones, es un simple entero asignado secuencialmente a medida que se agregan filas a la tabla. Esta columna clave es necesaria en aquellas situaciones en las que se añade una enorme cantidad de filas de error a la tabla. ¡¡Esperemos que esto no suceda!!.
 
-![Errores](../_src/assets/errores.PNG)
+![Errores](/_src/M3/assets/errores.PNG)
 
 ### Triggers
 
