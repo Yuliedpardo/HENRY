@@ -96,7 +96,7 @@ Te recomendamos leer al menos las siguientes herramientas que te serán útiles 
 
 1. Utilizando los conectores Excel y CSV, debes conectarte a los archivos de la Clase 1 del M3.
 
-![Archivos](/HENRY M5-DATA ANALYTICS/_src/assets/ejer21.PNG)
+![Archivos](/_src/M5/assets/ejer21.PNG)
 
 2. Renombrar las tablas que no tengan la denominación adecuada.
 3. Elimina las columnas que no formen parte de la tabla original (column 1, column 2, etc.) y renombra las columnas:
