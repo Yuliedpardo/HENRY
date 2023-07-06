@@ -10,7 +10,7 @@
 
 # Frameworks Hadoop
 
-<img src="../_src/M4/assets/Frameworks_Hadoop.jpg"  height="400">
+<img src="/_src/M4/assets/Frameworks_Hadoop.jpg"  height="400">
 
 ## Proveedores de Servicios (Vendors) de grado empresarial
 
@@ -23,7 +23,7 @@
 
 ### Otras tecnologías Big Data
 
-<img src="../_src/M4/assets/Tecnologías_BigData.jpg"  height="400">
+<img src="/_src/M4/assets/Tecnologías_BigData.jpg"  height="400">
 
 # Virtualización
 
@@ -32,15 +32,15 @@
 Es la versión virtual de algún recurso tecnológico, como Hardware, un sistema operativo, un dispositivo de almacenamiento o recurso de red.
 Esa virtualización, es un sistema huésped que ejecuta sobre un sistema anfitrión, sin embargo tiene su propio sistema de archivos, que pueden tener múltiples formatos, como ser VDI, VMDK, VHD ó raw entre otros.
 
-<img src="../_src/M4/assets/Maquina_Virtual.jpg"  height="400">
+<img src="/_src/M4/assets/Maquina_Virtual.jpg"  height="400">
 
 ## Docker
 
 Utiliza contenedores, y lo que hacen es reutilizar el kernel, que es la parte mas profunda del SO de la maquina anfitriona, manejando de forma más óptima recursos que ya están disponibles en el SO anfitrión.
 Esa containerización, trae consigo las ventajas de ser más liviana, portable, de bajo acoplamiento debido a que los contenedores son autocontenidos (no afecta a los demás para su funcionamiento), escalable y segura.
 
-<img src="../_src/M4/assets/Docker.jpg"  height="400">
-<img src="../_src/M4/assets/Docker2.jpg"  height="400">
+<img src="/_src/M4/assets/Docker.jpg"  height="400">
+<img src="/_src/M4/assets/Docker2.jpg"  height="400">
 
 Corre nativamente en Linux, por eso para otros SO levanta una máquina virtual.
 
@@ -49,7 +49,7 @@ Componentes del Docker Engine:
 * REST API: Como cualquier otra API, es la que nos permite visualizar docker de forma “gráfica”.
 * Cliente de docker: Permite la comunicación con el centro de docker (Docker Daemon) que por defecto es la línea de comandos.
 
-<img src="../_src/M4/assets/Componentes_Docker.jpg"  height="400">
+<img src="/_src/M4/assets/Componentes_Docker.jpg"  height="400">
 
 Dentro de la arquitectura de Docker encontramos:<br>
     1. Contenedores: Se encapsulan las imagenes para llevarlas a otra computadora 	o servidor, etc.<br>
@@ -70,11 +70,11 @@ Ejemplo:
     4. Permisos de escritura para la 	carpeta /var/www de Apache
 
 
-<img src="../_src/M4/assets/Docker_Imagen.jpg"  height="400">
+<img src="/_src/M4/assets/Docker_Imagen.jpg"  height="400">
 
 ### ¿Qué es un contenedor?
 
-<img src="../_src/M4/assets/Contenedor.jpg"  height="400">
+<img src="/_src/M4/assets/Contenedor.jpg"  height="400">
 
 * Agrupación de procesos.
 * Entidad lógica, no tiene el límite estricto de las máquinas virtuales.

@@ -11,7 +11,7 @@
 * Permite crear infraestructuras de tipo de data warehouse sobre Hadoop para realizar análisis de grandes volúmenes de datos.
 * Asigna una estructura tabular (metadata) a los datos en bruto almacenados en HDFS.
 
-<img src="../_src/M4/assets/Hive.jpg"  height="400">
+<img src="/_src/M4/assets/Hive.jpg"  height="400">
 
 ### HiveQL (Hive Query Language)
 
@@ -44,7 +44,7 @@ Habitualmente se utilizan 2 formatos:
 * CSV para los datos en bruto 
 * Parquet para los datos procesados
 
-<img src="../_src/M4/assets/Formatos_Almacenamiento.jpg"  height="400">
+<img src="/_src/M4/assets/Formatos_Almacenamiento.jpg"  height="400">
 
 ### Particiones
 
@@ -52,7 +52,7 @@ El particionamiento es una forma de dividir una tabla en partes relacionadas en 
 Cada tabla puede tener una o más claves de partición para identificar una partición particular. 
 Esta forma de almacenar los datos permite realizar consultas mas eficientes.
 
-<img src="../_src/M4/assets/Hive_Particiones.jpg"  height="400">
+<img src="/_src/M4/assets/Hive_Particiones.jpg"  height="400">
 
 ### Hive SerDes
 
@@ -71,7 +71,7 @@ SerDes disponibles en Hive:
 
 ### Ejemplo Hive
 
-<img src="../_src/M4/assets/Hive_Ejemplo.jpg"  height="400">
+<img src="/_src/M4/assets/Hive_Ejemplo.jpg"  height="400">
 
 #### Enlace de Referencia:
 
@@ -123,7 +123,7 @@ No sólo las líneas de negocio se benefician de la gobernanza de datos. Las uni
 * Integración. Mayor facilidad de integración entre sistemas de información y entre diferentes fuentes de datos.
 * La cultura. Concienciación de la organización sobre el uso correcto de los datos y difusión de una cultura basada en ellos.
 
-<img src="../_src/M4/assets/Governanza.jpg"  height="400">
+<img src="/_src/M4/assets/Governanza.jpg"  height="400">
 
 Ecosistema Hadoop:
 * Ranger: políticas de seguridad (https://ranger.apache.org/)
@@ -133,7 +133,7 @@ Ecosistema Hadoop:
 
 1) Entorno a utilizar:
 
-<img src="../_src/M4/assets/Practica_Hive.jpg"  height="400"><br>
+<img src="/_src/M4/assets/Practica_Hive.jpg"  height="400"><br>
 
 Instrucciones para su configuración:
 * sudo apt install -y docker-compose
@@ -146,19 +146,19 @@ Instrucciones para su configuración:
 En la sección de mis documentos, cargar el archivo clase-03.json y luego seleccionar el editor Hive.
 
 
-<img src="../_src/M4/assets/Practica_Hive_01.jpg"  height="300"><br>
+<img src="/_src/M4/assets/Practica_Hive_01.jpg"  height="300"><br>
 
-<img src="../_src/M4/assets/Practica_Hive_02.jpg"  height="300"><br>
+<img src="/_src/M4/assets/Practica_Hive_02.jpg"  height="300"><br>
 
-<img src="../_src/M4/assets/Practica_Hive_03.jpg"  height="300"><br>
+<img src="/_src/M4/assets/Practica_Hive_03.jpg"  height="300"><br>
 
-<img src="../_src/M4/assets/Practica_Hive_04.jpg"  height="300"><br>
+<img src="/_src/M4/assets/Practica_Hive_04.jpg"  height="300"><br>
 
-<img src="../_src/M4/assets/Practica_Hive_05.jpg"  height="300"><br>
+<img src="/_src/M4/assets/Practica_Hive_05.jpg"  height="300"><br>
 
-<img src="../_src/M4/assets/Practica_Hive_06.jpg"  height="300"><br>
+<img src="/_src/M4/assets/Practica_Hive_06.jpg"  height="300"><br>
 
-<img src="../_src/M4/assets/Practica_Hive_07.jpg"  height="300"><br>
+<img src="/_src/M4/assets/Practica_Hive_07.jpg"  height="300"><br>
 
 
 ### Esto nos ubica en el bash del contenedor servidor de hive

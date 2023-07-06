@@ -10,7 +10,7 @@
 Un proyecto de Big Data implica realizar múltiples tareas en diferentes sistemas en un orden especifico.
 Es por este motivo que existe la necesidad de contar con orquestadores de flujos de trabajo que permitan automatizar el movimiento y la transformación de los datos.
 
-<img src="../_src/M4/assets/Workflows.jpg"  height="250">
+<img src="/_src/M4/assets/Workflows.jpg"  height="250">
 
 En anteriores clases se menciono que unos de los criterios de la calidad del dato está asociado a la actualización, y esto supone un agregado de complejidad a la hora de armar el repositorio unificado o Data Warehouse, debido a que, hay que tener en cuenta la necesidad de una carga periódica de datos, lo que implica el hecho de que tablas que ya teníamos cargadas, cuyos datos pasaron por un proceso de transformación, deben de verse incrementadas con nuevo dato. 
 Las cargas incrementales en un ETL son esenciales para cumplir con este punto, de otra manera, cada vez que sea necesario actualizar la información, habría que ingestar todo el histórico completo, lo cual, supone mucha más carga de proceso. 
@@ -23,14 +23,14 @@ Es una representación conceptual de una serie de actividades.
 * Dirigido: cada relación entre nodos tiene un sentido único 
 * Acíclico: no hay ningún camino que nos permita volver al nodo inicial
 
-<img src="../_src/M4/assets/DAG.jpg"  height="300">
+<img src="/_src/M4/assets/DAG.jpg"  height="300">
 
 ## Notación CRON
 
 En el sistema operativo Unix, cron es un administrador regular de procesos en segundo plano (demonio) que ejecuta procesos o guiones a intervalos regulares (por ejemplo, cada minuto, día, semana o mes). Los procesos que deben ejecutarse y la hora en la que deben hacerlo se especifican en el fichero crontab.
 Como usuario podemos agregar comandos o scripts con tareas a cron para automatizar algunos procesos. 
 
-<img src="../_src/M4/assets/CRON.jpg"  height="250">
+<img src="/_src/M4/assets/CRON.jpg"  height="250">
 
 #### Enlaces recomendados:
 
@@ -43,7 +43,7 @@ Es un sistema de programación de workflows incluido en distribuciones de Hadoop
 Los flujos de trabajo en Oozie están definidos como una colección de tareas representadas en un DAG.
 Acciones soportadas: MapReduce, Shell, Pig, Hive, Spark, Java, entre otros. 
 
-<img src="../_src/M4/assets/Oozie.jpg"  height="250">
+<img src="/_src/M4/assets/Oozie.jpg"  height="250">
 
 [Oozie] (https://oozie.apache.org/docs/5.2.0/DG_Overview.html)
 
@@ -53,7 +53,7 @@ Es una herramienta desarrollada por la NSA (actualmente es un proyecto de alto n
 Posee una interfaz web que permite crear flujos sin necesidad de escribir código.
 Brinda funcionalidades de seguridad, monitoreo y linaje de datos en movimiento.
 
-<img src="../_src/M4/assets/Nifi.jpg"  height="400">
+<img src="/_src/M4/assets/Nifi.jpg"  height="400">
 
 [Nifi] (https://nifi.apache.org/docs/nifi-docs/html/getting-started.html)
 
@@ -63,7 +63,7 @@ Es una plataforma de gestión de flujos de trabajo de código abierto desarrolla
 Las tareas y dependencias se representan como DAG’s definidos en scripts Python.
 Los DAG’s pueden se programados para ejecutarse en un horario predefinido o en función de la ocurrencia de eventos.
 
-<img src="../_src/M4/assets/Airflow.jpg"  height="400">
+<img src="/_src/M4/assets/Airflow.jpg"  height="400">
 
 [Airflow] (https://airflow.apache.org/docs/apache-airflow/stable/concepts/index.html)
 
@@ -78,7 +78,7 @@ https://medium.com/@rose4earn/docker-compose-ing-kafka-airflow-spark-b2ea66993c5
 https://github.com/KumarRoshandot/AirFlow_Kafka_Spark_Docker/tree/master/Project_Flight_Docker2
 
 Arquitectura:
-<img src="../_src/M4/assets/Airflow2.jpg"  height="400">
+<img src="/_src/M4/assets/Airflow2.jpg"  height="400">
 
 ## Homework
 
